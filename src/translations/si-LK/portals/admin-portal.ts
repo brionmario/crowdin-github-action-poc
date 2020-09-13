@@ -22,21 +22,21 @@ export const adminPortal: AdminPortalNS = {
       form: {
         inputs: {
           filterAttribute: {
-            label: "Filter attribute",
-            placeholder: "E.g. Name, Description etc.",
+            label: "පෙරහන් ගුණාංගය",
+            placeholder: "උදා: නම, විස්තරය ආදිය.",
             validations: {
-              empty: "Filter attribute is a required field."
+              empty: "පෙරහන් ගුණාංගය අවශ්‍ය ක්ෂේත්‍රයකි."
             }
           },
           filterCondition: {
-            label: "Filter condition",
+            label: "පෙරහන් තත්වය",
             placeholder: "E.g. Starts with etc.",
             validations: {
-              empty: "Filter condition is a required field."
+              empty: "පෙරහන් තත්ත්වය අත්‍යවශ්‍ය ක්ෂේත්‍රයකි."
             }
           },
           filterValue: {
-            label: "Filter value",
+            label: "පෙරහන් අගය",
             placeholder: "E.g. admin, wso2 etc.",
             validations: {
               empty: "Filter value is a required field."
