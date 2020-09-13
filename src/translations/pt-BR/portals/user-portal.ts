@@ -835,8 +835,8 @@ export const userPortal: UserPortalNS = {
             subList2: {
               heading: "WSO2 IS pode usar:",
               list: {
-                0: "Ocorreu um erro ao exibir esta página.",
-                1: "Consulte o console do navegador para obter detalhes técnicos."
+                0: "Something went wrong while displaying this page.",
+                1: "See the browser console for technical details."
               }
             }
           },
@@ -1170,24 +1170,24 @@ export const userPortal: UserPortalNS = {
     404: {
       action: "Voltar para casa",
       subtitles: {
-        0: "Não conseguimos encontrar resultados para \"{{query}}\"",
-        1: "Tente um termo de pesquisa diferente."
+        0: "Ocorreu um erro ao exibir esta página.",
+        1: "Consulte o console do navegador para obter detalhes técnicos."
       },
       title: "página não encontrada"
     },
     emptySearchResult: {
       action: "Limpar consulta de pesquisa",
       subtitles: {
-        0: "Parece que você não tem permissão para usar este portal.",
-        1: "Faça login com uma conta diferente."
+        0: "Não conseguimos encontrar resultados para \"{{query}}\"",
+        1: "Tente um termo de pesquisa diferente."
       },
       title: "Nenhum resultado encontrado"
     },
     genericError: {
       action: "Recarregue a página",
       subtitles: {
-        0: "Something went wrong while displaying this page.",
-        1: "See the browser console for technical details."
+        0: "Parece que você não tem permissão para usar este portal.",
+        1: "Faça login com uma conta diferente."
       },
       title: "Something went wrong"
     },
