@@ -15,1355 +15,1262 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
 import { UserPortalNS } from "../../../models";
-
 export const userPortal: UserPortalNS = {
-    components: {
-        accountRecovery: {
-            codeRecovery: {
-                descriptions: {
-                    add: "Adicionar ou atualizar opções de recuperação de código"
-                },
-                heading: "Recuperação de código"
-            },
-            emailRecovery: {
-                descriptions: {
-                    add: "Adicionar um endereço de email de recuperação",
-                    update: "Atualizar endereço de email de recuperação ({{email}})"
-                },
-                forms: {
-                    emailResetForm: {
-                        inputs: {
-                            email: {
-                                label: "Endereço de e-mail",
-                                placeholder: "Digite o endereço de e-mail de recuperação",
-                                validations: {
-                                    empty: "Digite um endereço de email",
-                                    invalidFormat: "O endereço de email não está no formato correto"
-                                }
-                            }
-                        }
-                    }
-                },
-                heading: "Recuperação de Email",
-                notifications: {
-                    updateEmail: {
-                        error: {
-                            description: "{{description}}",
-                            message: "Erro ao atualizar o email de recuperação"
-                        },
-                        genericError: {
-                            description: "Ocorreu um erro ao atualizar o email de recuperação",
-                            message: "Algo deu errado"
-                        },
-                        success: {
-                            description: "O endereço de email no perfil do usuário foi atualizado com sucesso",
-                            message: "Endereço de email atualizado com sucesso"
-                        }
-                    }
-                }
-            },
-            questionRecovery: {
-                descriptions: {
-                    add: "Adicionar e atualizar perguntas de desafio de recuperação de conta"
-                },
-                forms: {
-                    securityQuestionsForm: {
-                        inputs: {
-                            answer: {
-                                label: "Responda",
-                                placeholder: "Digite sua resposta",
-                                validations: {
-                                    empty: "A resposta é um campo obrigatório"
-                                }
-                            },
-                            question: {
-                                label: "Pergunta, questão",
-                                placeholder: "Selecione uma pergunta de segurança",
-                                validations: {
-                                    empty: "Pelo menos uma pergunta de segurança deve ser selecionada"
-                                }
-                            }
-                        }
-                    }
-                },
-                heading: "Questões de segurança",
-                notifications: {
-                    addQuestions: {
-                        error: {
-                            description: "{{description}}",
-                            message: "Ocorreu um erro ao adicionar as perguntas de segurança"
-                        },
-                        genericError: {
-                            description: "Ocorreu um erro ao adicionar as perguntas de segurança",
-                            message: "Algo deu errado"
-                        },
-                        success: {
-                            description: "As perguntas de segurança necessárias foram adicionadas com sucesso",
-                            message: "Perguntas de segurança foram adicionadas com sucesso"
-                        }
-                    },
-                    updateQuestions: {
-                        error: {
-                            description: "{{description}}",
-                            message: "Erro ao atualizar as perguntas de segurança"
-                        },
-                        genericError: {
-                            description: "Ocorreu um erro ao atualizar as perguntas de segurança",
-                            message: "Algo deu errado"
-                        },
-                        success: {
-                            description: "As perguntas de segurança necessárias foram atualizadas com sucesso",
-                            message: "As perguntas de segurança foram atualizadas com sucesso"
-                        }
-                    }
-                }
-            }
+  components: {
+    accountRecovery: {
+      codeRecovery: {
+        descriptions: {
+          add: "Add or update code recovery options"
         },
-        advancedSearch: {
-            form: {
-                inputs: {
-                    filterAttribute: {
-                        label: "Atributo de filtro",
-                        placeholder: "ex: nome, descrição etc.",
-                        validations: {
-                            empty: "O atributo de filtro é um campo obrigatório"
-                        }
-                    },
-                    filterCondition: {
-                        label: "Condição do filtro",
-                        placeholder: "ex: começa com etc.",
-                        validations: {
-                            empty: "A condição do filtro é um campo obrigatório"
-                        }
-                    },
-                    filterValue: {
-                        label: "Valor do filtro",
-                        placeholder: "ex: admin, wso2 etc.",
-                        validations: {
-                            empty: "O valor do filtro é um campo obrigatório"
-                        }
-                    }
-                }
-            },
-            hints: {
-                querySearch: {
-                    actionKeys: "Shift + Enter",
-                    label: "Para pesquisar como uma consulta"
-                }
-            },
-            options: {
-                header: "Busca Avançada"
-            },
-            placeholder: "Procura por nome",
-            popups: {
-                clear: "pesquisa clara",
-                dropdown: "mostrar opções"
-            },
-            resultsIndicator: "Mostrando resultados para \"{{query}}\""
+        heading: "Code Recovery"
+      },
+      emailRecovery: {
+        descriptions: {
+          add: "Add or update recovery email address",
+          update: "Update recovery email address ({{email}})"
         },
-        applications: {
-            advancedSearch: {
-                form: {
-                    inputs: {
-                        filterAttribute: {
-                            placeholder: "ex: nome, descrição etc."
-                        },
-                        filterCondition: {
-                            placeholder: "ex: começa com etc."
-                        },
-                        filterValue: {
-                            placeholder: "ex: Zoom, Salesforce etc."
-                        }
-                    }
-                },
-                placeholder: "Procura por nome",
-            },
-            all: {
-                heading: "Todas as aplicações"
-            },
-            favourite: {
-                heading: "Favoritas"
-            },
-            notifications: {
-                fetchApplications: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Erro ao recuperar aplicativos"
-                    },
-                    genericError: {
-                        description: "Não foi possível recuperar aplicativos",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Os aplicativos foram recuperados com sucesso.",
-                        message: "Recuperação de aplicativos bem-sucedida"
-                    }
+        forms: {
+          emailResetForm: {
+            inputs: {
+              email: {
+                label: "Email address",
+                placeholder: "Enter the recovery email address",
+                validations: {
+                  empty: "Enter an email address",
+                  invalidFormat: "The email address is not of the correct format"
                 }
-            },
-            placeholders: {
-                emptyList: {
-                    action: "Atualizar lista",
-                    subtitles: {
-                        0: "A lista de aplicativos retornou vazia.",
-                        1: "Isso pode ser devido a não ter aplicativos detectáveis.",
-                        2: "Peça a um administrador para ativar a capacidade de descoberta de aplicativos."
-                    },
-                    title: "Sem aplicações"
-                }
-            },
-            recent: {
-                heading: "Aplicações recentes"
+              }
             }
+          }
         },
-        approvals: {
-            notifications: {
-                fetchApprovalDetails: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Erro ao recuperar os detalhes da aprovação"
-                    },
-                    genericError: {
-                        description: "Não foi possível atualizar os detalhes da aprovação",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Recuperou com êxito os detalhes da aprovação",
-                        message: "Recuperação de detalhes da aprovação bem-sucedida"
-                    }
-                },
-                fetchPendingApprovals: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Erro ao recuperar aprovações pendentes"
-                    },
-                    genericError: {
-                        description: "Não foi possível recuperar as aprovações pendentes",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Recuperações pendentes recuperadas com sucesso",
-                        message: "Recuperação de aprovações pendentes bem-sucedida"
-                    }
-                },
-                updatePendingApprovals: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Erro ao atualizar a aprovação"
-                    },
-                    genericError: {
-                        description: "Não foi possível atualizar a aprovação",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Atualização aprovada com sucesso",
-                        message: "Atualização bem sucedida"
-                    }
-                }
-            }
-        },
-        changePassword: {
-            forms: {
-                passwordResetForm: {
-                    inputs: {
-                        confirmPassword: {
-                            label: "Confirme a Senha",
-                            placeholder: "Digite a nova senha",
-                            validations: {
-                                empty: "Confirmar senha é um campo obrigatório",
-                                mismatch: "A confirmação da senha não corresponde"
-                            }
-                        },
-                        currentPassword: {
-                            label: "Senha atual",
-                            placeholder: "Digite a senha atual",
-                            validations: {
-                                empty: "A senha atual é um campo obrigatório",
-                                invalid: "A senha atual é inválida"
-                            }
-                        },
-                        newPassword: {
-                            label: "Nova senha",
-                            placeholder: "Digite a nova senha",
-                            validations: {
-                                empty: "Nova senha é um campo obrigatório"
-                            }
-                        }
-                    },
-                    validations: {
-                        genericError: {
-                            description: "Algo deu errado. Por favor, tente novamente",
-                            message: "Alterar erro de senha"
-                        },
-                        invalidCurrentPassword: {
-                            description: "A senha atual que você digitou parece ser inválida. Por favor, tente " +
-                                "novamente",
-                            message: "Alterar erro de senha"
-                        },
-                        submitError: {
-                            description: "{{description}}",
-                            message: "Alterar erro de senha"
-                        },
-                        submitSuccess: {
-                            description: "A senha foi alterada com sucesso",
-                            message: "Redefinição de senha bem-sucedida"
-                        }
-                    }
-                }
+        heading: "Email recovery",
+        notifications: {
+          updateEmail: {
+            error: {
+              description: "{{description}}",
+              message: "Error updating the recovery email"
             },
-            modals: {
-                confirmationModal: {
-                    heading: "Confirmação",
-                    message: "A alteração da senha resultará no encerramento da sessão atual. Você precisará fazer " +
-                        "o login com a senha recém-alterada. Você deseja continuar?"
-                }
+            genericError: {
+              description: "Error occurred while updating the recovery email",
+              message: "Something went wrong"
+            },
+            success: {
+              description: "The email address in the user profile has been updated successfully",
+              message: "Email Address Updated Successfully"
             }
+          }
+        }
+      },
+      questionRecovery: {
+        descriptions: {
+          add: "Add or update account recovery challenge questions"
+        },
+        forms: {
+          securityQuestionsForm: {
+            inputs: {
+              answer: {
+                label: "Answer",
+                placeholder: "Enter your answer",
+                validations: {
+                  empty: "Answer is a required field"
+                }
+              },
+              question: {
+                label: "Question",
+                placeholder: "Select a security question",
+                validations: {
+                  empty: "At least one security question must be selected"
+                }
+              }
+            }
+          }
+        },
+        heading: "Security questions",
+        notifications: {
+          addQuestions: {
+            error: {
+              description: "{{description}}",
+              message: "Error occurred while adding the security questions"
+            },
+            genericError: {
+              description: "Error occurred while adding the security questions",
+              message: "Something went wrong."
+            },
+            success: {
+              description: "The required security questions were added successfully",
+              message: "Security questions were successfully added"
+            }
+          },
+          updateQuestions: {
+            error: {
+              description: "{{description}}",
+              message: "Error updating the security questions"
+            },
+            genericError: {
+              description: "Error occurred while updating the security questions",
+              message: "Something went wrong."
+            },
+            success: {
+              description: "The required security questions were updated successfully",
+              message: "Security Questions were successfully updated"
+            }
+          }
+        }
+      }
+    },
+    advancedSearch: {
+      form: {
+        inputs: {
+          filterAttribute: {
+            label: "Filter attribute",
+            placeholder: "E.g. Name, Description etc.",
+            validations: {
+              empty: "Filter attribute is a required field."
+            }
+          },
+          filterCondition: {
+            label: "Filter condition",
+            placeholder: "E.g. Starts with etc.",
+            validations: {
+              empty: "Filter condition is a required field."
+            }
+          },
+          filterValue: {
+            label: "Filter value",
+            placeholder: "E.g. admin, wso2 etc.",
+            validations: {
+              empty: "Filter value is a required field."
+            }
+          }
+        }
+      },
+      hints: {
+        querySearch: {
+          actionKeys: "Shift + Enter",
+          label: "To search as a query"
+        }
+      },
+      options: {
+        header: "Advanced search"
+      },
+      placeholder: "Search by {{attribute}}",
+      popups: {
+        clear: "clear search",
+        dropdown: "Show options"
+      },
+      resultsIndicator: "Showing results for the query \"{{query}}\""
+    },
+    applications: {
+      advancedSearch: {
+        form: {
+          inputs: {
+            filterAttribute: {
+              placeholder: "E.g. Name, Description etc."
+            },
+            filterCondition: {
+              placeholder: "E.g. Starts with etc."
+            },
+            filterValue: {
+              placeholder: "E.g. Zoom, Salesforce etc."
+            }
+          }
+        },
+        placeholder: "Search by application name"
+      },
+      all: {
+        heading: "All Applications"
+      },
+      favourite: {
+        heading: "Favourites"
+      },
+      notifications: {
+        fetchApplications: {
+          error: {
+            description: "{{description}}",
+            message: "Error retrieving applications"
+          },
+          genericError: {
+            description: "Couldn't retrieve applications",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "Successfully retrieved the applications.",
+            message: "Applications retrieval successful"
+          }
+        }
+      },
+      placeholders: {
+        emptyList: {
+          action: "Refresh list",
+          subtitles: {
+            0: "The applications list returned empty.",
+            1: "This could be due to having no discoverable applications.",
+            2: "Please ask an admin to enable discoverability for applications."
+          },
+          title: "No Applications"
+        }
+      },
+      recent: {
+        heading: "Recent Applications"
+      }
+    },
+    approvals: {
+      notifications: {
+        fetchApprovalDetails: {
+          error: {
+            description: "{{description}}",
+            message: "Error retrieving the approval details"
+          },
+          genericError: {
+            description: "Couldn't update the approval details",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "Successfully retrieved the approval details",
+            message: "Approval details retrieval successful"
+          }
+        },
+        fetchPendingApprovals: {
+          error: {
+            description: "{{description}}",
+            message: "Error retrieving pending approvals"
+          },
+          genericError: {
+            description: "Couldn't retrieve pending approvals",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "Successfully retrieved pending approvals",
+            message: "Pending approvals retrieval successful"
+          }
+        },
+        updatePendingApprovals: {
+          error: {
+            description: "{{description}}",
+            message: "Error updating the approval"
+          },
+          genericError: {
+            description: "Couldn't update the approval",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "Successfully updated the approval",
+            message: "Update successful"
+          }
+        }
+      }
+    },
+    changePassword: {
+      forms: {
+        passwordResetForm: {
+          inputs: {
+            confirmPassword: {
+              label: "Confirm password",
+              placeholder: "Enter the new password",
+              validations: {
+                empty: "Confirm password is a required field",
+                mismatch: "The password confirmation doesn't match"
+              }
+            },
+            currentPassword: {
+              label: "Current password",
+              placeholder: "Enter the current password",
+              validations: {
+                empty: "Current password is a required field",
+                invalid: "Current password is invalid"
+              }
+            },
+            newPassword: {
+              label: "New password",
+              placeholder: "Enter the new password",
+              validations: {
+                empty: "New password is a required field"
+              }
+            }
+          },
+          validations: {
+            genericError: {
+              description: "Something went wrong. Please try again",
+              message: "Change password error"
+            },
+            invalidCurrentPassword: {
+              description: "The current password you entered appears to be invalid. Please try again",
+              message: "Change password error"
+            },
+            submitError: {
+              description: "{{description}}",
+              message: "Change password error"
+            },
+            submitSuccess: {
+              description: "The password has been changed successfully",
+              message: "Password reset successful"
+            }
+          }
+        }
+      },
+      modals: {
+        confirmationModal: {
+          heading: "Confirmation",
+          message: "Changing the password will result in the termination of the current session. You will " + "have to login with the newly changed password. Do you wish to continue?"
+        }
+      }
+    },
+    consentManagement: {
+      editConsent: {
+        collectionMethod: "Collection Method",
+        dangerZones: {
+          revoke: {
+            actionTitle: "Revoke",
+            header: "Revoke consent",
+            subheader: "You will have to provide consent for this application again."
+          }
+        },
+        description: "Description",
+        piiCategoryHeading: "Manage consent for the collection and sharing of your personal information " + "with the application. Uncheck the attributes that you need to revoke and press the update " + "button to save the changes or press the revoke button to remove the consent for all the " + "attributes.",
+        state: "State",
+        version: "Version"
+      },
+      modals: {
+        consentRevokeModal: {
+          heading: "Are you sure?",
+          message: "This operation is not reversible. This will permanently revoke consent for all the " + "attributes. Are you sure you want to proceed?",
+          warning: "Please note that you will be redirected to the login consent page"
+        }
+      },
+      notifications: {
+        consentReceiptFetch: {
+          error: {
+            description: "{{description}}",
+            message: "Something went wrong"
+          },
+          genericError: {
+            description: "Couldn't load information on the selected application",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "Successfully retrieved the consent receipt",
+            message: "Successful retrieval"
+          }
+        },
+        consentedAppsFetch: {
+          error: {
+            description: "{{description}}",
+            message: "Something went wrong"
+          },
+          genericError: {
+            description: "Couldn't load the list of consented applications",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "Successfully retrieved the consented applications list",
+            message: "Successful retrieval"
+          }
+        },
+        revokeConsentedApp: {
+          error: {
+            description: "{{description}}",
+            message: "Consents Revoke Error"
+          },
+          genericError: {
+            description: "Couldn't revoke consent for the application",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "The consent has been successfully revoked for the application",
+            message: "Consents Revoke Success"
+          }
+        },
+        updateConsentedClaims: {
+          error: {
+            description: "{{description}}",
+            message: "Something went wrong"
+          },
+          genericError: {
+            description: "The consented claims failed to update for the application",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "The consented claims have been successfully updated for the application",
+            message: "Consented claims updated successfully"
+          }
+        }
+      }
+    },
+    federatedAssociations: {
+      deleteConfirmation: "This will remove this external login from your account. Do you want to continue " + "removing?",
+      notifications: {
+        getFederatedAssociations: {
+          error: {
+            description: "{{description}}",
+            message: "Something went wrong"
+          },
+          genericError: {
+            description: "Couldn't retrieve External Logins",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "External Logins have been retrieved successfully",
+            message: "External Logins retrieved successfully"
+          }
+        },
+        removeAllFederatedAssociations: {
+          error: {
+            description: "{{description}}",
+            message: "Something went wrong"
+          },
+          genericError: {
+            description: "External Logins couldn't be removed",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "All the External Logins have been removed successfully",
+            message: "External Logins removed successfully"
+          }
+        },
+        removeFederatedAssociation: {
+          error: {
+            description: "{{description}}",
+            message: "Something went wrong"
+          },
+          genericError: {
+            description: "The External Login couldn't be removed",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "The External Login has been removed successfully",
+            message: "The External Login removed successfully"
+          }
+        }
+      }
+    },
+    footer: {
+      copyright: "WSO2 Identity Server © {{year}}"
+    },
+    linkedAccounts: {
+      accountTypes: {
+        local: {
+          label: "Add local user account"
+        }
+      },
+      deleteConfirmation: "This will remove the linked account from your account. Do you want to continue " + "removing?",
+      forms: {
+        addAccountForm: {
+          inputs: {
+            password: {
+              label: "Password",
+              placeholder: "Enter the password",
+              validations: {
+                empty: "Password is a required field"
+              }
+            },
+            username: {
+              label: "Username",
+              placeholder: "Enter the username",
+              validations: {
+                empty: "Username is a required field"
+              }
+            }
+          }
+        }
+      },
+      notifications: {
+        addAssociation: {
+          error: {
+            description: "{{description}}",
+            message: "Error retrieving linked user accounts"
+          },
+          genericError: {
+            description: "Error occurred while adding the linked account",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "The required linked user account added successfully",
+            message: "Linked user account added successfully"
+          }
+        },
+        getAssociations: {
+          error: {
+            description: "{{description}}",
+            message: "Error retrieving linked user accounts"
+          },
+          genericError: {
+            description: "Error occurred while retrieving the linked user accounts",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "The required user profile details are retrieved successfully",
+            message: "Linked user accounts retrieved successfully"
+          }
+        },
+        removeAllAssociations: {
+          error: {
+            description: "{{description}}",
+            message: "Error removing linked user accounts"
+          },
+          genericError: {
+            description: "Error occurred while removing the linked user accounts",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "All the linked user accounts have been removed",
+            message: "Linked accounts removed successfully"
+          }
+        },
+        removeAssociation: {
+          error: {
+            description: "{{description}}",
+            message: "Error removing the linked user account"
+          },
+          genericError: {
+            description: "Error occurred while removing the linked user account",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "The linked user accounts have been removed",
+            message: "Linked account removed successfully"
+          }
+        },
+        switchAccount: {
+          error: {
+            description: "{{description}}",
+            message: "Error occurred while switching the account"
+          },
+          genericError: {
+            description: "Error occurred while switching the account",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "The account has been switched successfully",
+            message: "Account switched successfully"
+          }
+        }
+      }
+    },
+    mfa: {
+      authenticatorApp: {
+        description: "Scan the QR code using an Authenticator App to use TOTP" + " as a second " + "authentication factor",
+        heading: "via Authenticator App",
+        hint: "Show the QR Code",
+        modals: {
+          done: "Success! Now you can use your Authentication App for two-factor authentication",
+          scan: {
+            authenticatorApps: "Authenticator Apps",
+            generate: "Generate a new code",
+            heading: "Scan this QR Code using an Authenticator App",
+            messageBody: "You can find a list of Authenticator Apps available here.",
+            messageHeading: "Don't have an Authenticator App installed?"
+          },
+          verify: {
+            error: "Verification failed. Please try again.",
+            heading: "Enter the verification code from the Authentication App",
+            label: "Verification Code",
+            placeholder: "Enter your verification code",
+            reScan: "Re-scan",
+            reScanQuestion: "Want to scan the QR code again?",
+            requiredError: "Enter the verification code"
+          }
+        },
+        notifications: {
+          initError: {
+            error: {
+              description: "{{error}}",
+              message: "Something went wrong"
+            },
+            genericError: {
+              description: "An error occurred while retrieving the QR code",
+              message: "Something went wrong"
+            }
+          },
+          refreshError: {
+            error: {
+              description: "{{error}}",
+              message: "Something went wrong"
+            },
+            genericError: {
+              description: "An error occurred while trying to get a new QR code",
+              message: "Something went wrong"
+            }
+          }
+        }
+      },
+      fido: {
+        description: "Authenticate yourself by connecting a biometric device or a FIDO key",
+        form: {
+          label: "Security Device",
+          placeholder: "Enter a device name",
+          remove: "Remove the device",
+          required: "Please enter a name for your security device"
+        },
+        heading: "via Security Device",
+        modals: {
+          deviceRegistrationErrorModal: {
+            description: "The device registration was interrupted. If this was not intentional you " + "may retry the same flow or try again with an older security key.",
+            heading: "Device Registration Failed"
+          }
+        },
+        notifications: {
+          removeDevice: {
+            error: {
+              description: "{{description}}",
+              message: "Error occurred while removing the device"
+            },
+            genericError: {
+              description: "Error occurred while removing the device",
+              message: "Something went wrong"
+            },
+            success: {
+              description: "The device was successfully removed from the list",
+              message: "Your Device Removed Successfully"
+            }
+          },
+          startFidoFlow: {
+            error: {
+              description: "{{description}}",
+              message: "Error occurred while retrieving the device"
+            },
+            genericError: {
+              description: "Error occurred while retrieving the device",
+              message: "Something went wrong"
+            },
+            success: {
+              description: "The device was successfully registered and now you can use it as an " + "authentication factor",
+              message: "Your Device Registered Successfully"
+            }
+          },
+          updateDeviceName: {
+            error: {
+              description: "{{description}}",
+              message: "Error occurred while updating the security device name"
+            },
+            genericError: {
+              description: "Error occurred while updating the security device name",
+              message: "Something went wrong"
+            },
+            success: {
+              description: "The name of your security device was successfully updated",
+              message: "Security Device name updated successfully"
+            }
+          }
+        },
+        tryButton: "Try with an older Device"
+      },
+      smsOtp: {
+        descriptions: {
+          hint: "You'll receive a text message containing a one-time verification code"
+        },
+        heading: "via SMS",
+        notifications: {
+          updateMobile: {
+            error: {
+              description: "{{description}}",
+              message: "Error occurred while updating the mobile number"
+            },
+            genericError: {
+              description: "Error occurred while updating the mobile number",
+              message: "Something went wrong"
+            },
+            success: {
+              description: "The mobile number in the user profile is updated successfully",
+              message: "Mobile number updated successfully"
+            }
+          }
+        }
+      }
+    },
+    overview: {
+      widgets: {
+        accountActivity: {
+          actionTitles: {
+            update: "Manage account activity"
+          },
+          description: "You are currently logged in from the following device",
+          header: "Account activity"
+        },
+        accountSecurity: {
+          actionTitles: {
+            update: "Update account security"
+          },
+          description: "Settings and recommendations to help you keep your account secure",
+          header: "Account security"
+        },
+        accountStatus: {
+          complete: "Your profile is complete",
+          completedFields: "Completed fields",
+          completionPercentage: "Your profile completion is at {{percentage}}%",
+          inComplete: "Complete your profile",
+          inCompleteFields: "Incomplete fields",
+          mandatoryFieldsCompletion: "{{completed}} out of {{total}} mandatory fields completed",
+          optionalFieldsCompletion: "{{completed}} out of {{total}} optional fields completed"
         },
         consentManagement: {
-            editConsent: {
-                collectionMethod: "Método de Coleta",
-                dangerZones: {
-                    revoke: {
-                        actionTitle: "Revogar",
-                        header: "Revogar consentimento",
-                        subheader: "Você precisará fornecer o consentimento para este aplicativo novamente."
-                    }
-                },
-                description: "Descrição",
-                piiCategoryHeading: "Gerencie o consentimento para a coleta e o compartilhamento de suas informações " +
-                    "pessoais com o aplicativo. Desmarque os atributos que você precisa revogar e pressione o botão " +
-                    "atualizar para salvar as alterações ou pressione o botão revogar para remover o consentimento " +
-                    "para todos os atributos.",
-                state: "Estado",
-                version: "Versão"
-            },
-            modals: {
-                consentRevokeModal: {
-                    heading: "Você tem certeza?",
-                    message: "Esta operação não é reversível. Isso revogará permanentemente o consentimento para " +
-                        "todos os atributos. Tem certeza de que deseja continuar?",
-                    warning: "Observe que você será redirecionado para a página de consentimento de login"
-                }
-            },
-            notifications: {
-                consentReceiptFetch: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Algo deu errado"
-                    },
-                    genericError: {
-                        description: "Não foi possível carregar as informações no aplicativo selecionado",
-                        message: "Something went wrong"
-                    },
-                    success: {
-                        description: "Recuperado com sucesso o recibo de consentimento",
-                        message: "Recuperação bem sucedida"
-                    }
-                },
-                consentedAppsFetch: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Algo deu errado"
-                    },
-                    genericError: {
-                        description: "Não foi possível carregar a lista de aplicativos consentidos",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Recuperada com sucesso a lista de aplicativos consentidos",
-                        message: "Recuperação bem sucedida"
-                    }
-                },
-                revokeConsentedApp: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Erro de revogação de consentimento"
-                    },
-                    genericError: {
-                        description: "Não foi possível revogar o consentimento para o aplicativo",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "O consentimento foi revogado com sucesso para o aplicativo",
-                        message: "O consentimento revoga o sucesso"
-                    }
-                },
-                updateConsentedClaims: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Algo deu errado"
-                    },
-                    genericError: {
-                        description: "As reivindicações consentidas falharam ao atualizar para o aplicativo",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "As reivindicações consentidas foram atualizadas com sucesso para o aplicativo",
-                        message: "Reivindicações consentidas atualizadas com sucesso"
-                    }
-                }
-            }
-        },
-        federatedAssociations: {
-            deleteConfirmation: "Isso removerá esse login externo da sua conta. Deseja continuar removendo?",
-            notifications: {
-                getFederatedAssociations: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Algo deu errado"
-                    },
-                    genericError: {
-                        description: "Não foi possível recuperar logons externos",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Logins externos foram recuperados com sucesso",
-                        message: "Logins externos recuperados com sucesso"
-                    }
-                },
-                removeAllFederatedAssociations: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Algo deu errado"
-                    },
-                    genericError: {
-                        description: "Federated Associations couldn't be removed",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Todos os logins externos foram removidos com sucesso",
-                        message: "Logins externos removidos com sucesso"
-                    }
-                },
-                removeFederatedAssociation: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Algo deu errado"
-                    },
-                    genericError: {
-                        description: "Não foi possível remover o logon externo",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "O logon externo foi removido com sucesso",
-                        message: "O logon externo removido com sucesso"
-                    }
-                }
-            }
-        },
-        footer: {
-            copyright: "Servidor de Identidade WSO2 © {{year}}"
-        },
-        linkedAccounts: {
-            accountTypes: {
-                local: {
-                    label: "Adicionar conta de usuário local"
-                }
-            },
-            deleteConfirmation: "Isso removerá a conta vinculada da sua conta. Deseja continuar removendo?",
-            forms: {
-                addAccountForm: {
-                    inputs: {
-                        password: {
-                            label: "Senha",
-                            placeholder: "Digite a senha",
-                            validations: {
-                                empty: "Senha é um campo obrigatório"
-                            }
-                        },
-                        username: {
-                            label: "Nome de usuário",
-                            placeholder: "Digite o nome de usuário",
-                            validations: {
-                                empty: "Nome de usuário é um campo obrigatório"
-                            }
-                        }
-                    }
-                }
-            },
-            notifications: {
-                addAssociation: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Erro ao recuperar contas de usuário vinculadas"
-                    },
-                    genericError: {
-                        description: "Ocorreu um erro ao adicionar a conta vinculada",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "A conta de usuário vinculada necessária adicionada com sucesso",
-                        message: "Conta de usuário vinculada adicionada com sucesso"
-                    }
-                },
-                getAssociations: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Erro ao recuperar contas de usuário vinculadas"
-                    },
-                    genericError: {
-                        description: "Ocorreu um erro ao recuperar as contas de usuário vinculadas",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Os detalhes do perfil do usuário necessários são recuperados com sucesso",
-                        message: "Contas de usuário vinculadas recuperadas com sucesso"
-                    }
-                },
-                removeAllAssociations: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Erro ao remover contas de usuário vinculadas"
-                    },
-                    genericError: {
-                        description: "O usuário vinculado é responsável por remover o erro",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Todas as contas de usuário vinculadas foram removidas",
-                        message: "Contas vinculadas removidas"
-                    }
-                },
-                removeAssociation: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Erro ao remover a conta de usuário vinculada"
-                    },
-                    genericError: {
-                        description: "A conta do usuário vinculado que remove o erro ocorreu",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "As contas de usuário vinculadas foram removidas",
-                        message: "A conta vinculada foi removida"
-                    }
-                },
-                switchAccount: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Ocorreu um erro ao mudar de conta"
-                    },
-                    genericError: {
-                        description: "Ocorreu um erro ao mudar de conta",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "A conta foi trocada com sucesso",
-                        message: "Conta trocada com sucesso"
-                    }
-                }
-            }
-        },
-        mfa: {
-            authenticatorApp: {
-                description: "Digitalize o código QR usando um aplicativo Authenticator para usar o" +
-                    " TOTP como um segundo fator de autenticação",
-                heading: "Authenticator App",
-                hint: "Mostrar o QR Code",
-                modals: {
-                    done: "Sucesso! Agora você pode usar seu aplicativo de autenticação para autenticação de dois " +
-                        "fatores",
-                    scan: {
-                        authenticatorApps: "Authenticator Apps",
-                        generate: "Gere um novo código",
-                        heading: "Leia este QR Code usando um aplicativo Authenticator",
-                        messageBody: "Você pode encontrar uma lista de aplicativos autenticadores disponíveis aqui.",
-                        messageHeading: "Não tem um aplicativo autenticador instalado?"
-                    },
-                    verify: {
-                        error: "Falha na verificação. Por favor, tente novamente.",
-                        heading: "Digite o código de verificação no aplicativo de autenticação",
-                        label: "Código de verificação",
-                        placeholder: "Digite seu código de verificação",
-                        reScan: "Verificar novamente",
-                        reScanQuestion: "Deseja digitalizar o código QR novamente?",
-                        requiredError: "Insira o código de verificação"
-                    }
-                },
-                notifications: {
-                    initError: {
-                        error: {
-                            description: "{{error}}",
-                            message: "Algo deu errado"
-                        },
-                        genericError: {
-                            description: "Ocorreu um erro ao recuperar o código QR",
-                            message: "Algo deu errado"
-                        }
-                    },
-                    refreshError: {
-                        error: {
-                            description: "{{error}}",
-                            message: "Algo deu errado"
-                        },
-                        genericError: {
-                            description: "Erro ao tentar obter um novo código QR",
-                            message: "Algo deu errado"
-                        }
-                    }
-                }
-            },
-            fido: {
-                description: "Autentique-se conectando uma chave FIDO",
-                form: {
-                    label: "Dispositivo de segurança",
-                    placeholder: "Digite o nome do dispositivo",
-                    remove: "Retire o dispositivo",
-                    required: "Digite um nome para o seu dispositivo de segurança"
-                },
-                heading: "FIDO",
-                modals: {
-                    deviceRegistrationErrorModal: {
-                        description: "O registro do dispositivo foi interrompido. Se isso não foi intencional, tente " +
-                            "novamente o mesmo fluxo ou tente novamente com uma chave de segurança mais antiga.",
-                        heading: "Falha no registro do dispositivo"
-                    }
-                },
-                notifications: {
-                    removeDevice: {
-                        error: {
-                            description: "{{description}}",
-                            message: "Ocorreu um erro ao remover o dispositivo"
-                        },
-                        genericError: {
-                            description: "Ocorreu um erro ao remover o dispositivo",
-                            message: "Algo deu errado"
-                        },
-                        success: {
-                            description: "O dispositivo foi removido com sucesso da lista",
-                            message: "Seu dispositivo foi removido com sucesso"
-                        }
-                    },
-                    startFidoFlow: {
-                        error: {
-                            description: "{{description}}",
-                            message: "Ocorreu um erro ao recuperar o dispositivo"
-                        },
-                        genericError: {
-                            description: "Ocorreu um erro ao recuperar o dispositivo",
-                            message: "Algo deu errado"
-                        },
-                        success: {
-                            description: "O dispositivo foi registrado com sucesso e agora você pode usá-lo como" +
-                                " um fator de autenticação",
-                            message: "Seu dispositivo registrado com sucesso"
-                        }
-                    },
-                    updateDeviceName: {
-                        error: {
-                            description: "{{description}}",
-                            message: "Ocorreu um erro ao atualizar o nome do dispositivo de segurança"
-                        },
-                        genericError: {
-                            description: "Erro ao atualizar o nome do dispositivo de segurança",
-                            message: "Algo deu errado"
-                        },
-                        success: {
-                            description:
-                                "O nome do seu dispositivo de segurança foi atualizado com sucesso",
-                            message: "Nome do dispositivo de segurança atualizado com sucesso"
-                        }
-                    }
-                },
-                tryButton: "Tente com um dispositivo mais antigo"
-            },
-            smsOtp: {
-                descriptions: {
-                    hint: "Você receberá uma mensagem de texto contendo o código de verificação"
-                },
-                heading: "SMS OTP",
-                notifications: {
-                    updateMobile: {
-                        error: {
-                            description: "{{description}}",
-                            message: "Ocorreu um erro ao atualizar o número do celular"
-                        },
-                        genericError: {
-                            description: "Ocorreu um erro ao atualizar o número do celular",
-                            message: "Algo deu errado"
-                        },
-                        success: {
-                            description: "O número do celular no perfil do usuário é atualizado com sucesso",
-                            message: "Número de celular atualizado com sucesso"
-                        }
-                    }
-                }
-            }
-        },
-        overview: {
-            widgets: {
-                accountActivity: {
-                    actionTitles: {
-                        update: "Gerenciar a atividade da conta"
-                    },
-                    description: "No momento, você está conectado no seguinte dispositivo",
-                    header: "Atividade da conta"
-                },
-                accountSecurity: {
-                    actionTitles: {
-                        update: "Atualizar segurança da conta"
-                    },
-                    description: "Configurações e recomendações para ajudar você a manter sua conta segura",
-                    header: "Segurança da conta"
-                },
-                accountStatus: {
-                    complete: "Seu perfil está completo",
-                    completedFields: "Campos preenchidos",
-                    completionPercentage: "A conclusão do seu perfil está em {{percentage}}%",
-                    inComplete: "Complete seu perfil",
-                    inCompleteFields: "Campos incompletos",
-                    mandatoryFieldsCompletion: "{{completed}} de {{total}} campos obrigatórios preenchidos",
-                    optionalFieldsCompletion: "{{completed}} de {{total}} campos opcionais preenchidos"
-                },
-                consentManagement: {
-                    actionTitles: {
-                        manage: "Gerenciar consentimentos"
-                    },
-                    description: "Controle os dados que você deseja compartilhar com os aplicativos",
-                    header: "Controle de consentimento"
-                }
-            }
-        },
-        privacy: {
-            about: {
-                description: "O WSO2 Identity Server (referido como \"WSO2 IS\" nesta política) é um servidor de " +
-                    "gerenciamento e titularidade de identidades de código aberto baseado em padrões e " +
-                    "especificações abertos.",
-                heading: "Sobre o servidor de identidade WSO2"
-            },
-            privacyPolicy: {
-                collectionOfPersonalInfo: {
-                    description: {
-                        list1: {
-                            0: "O WSO2 IS usa seu endereço IP para detectar tentativas suspeitas de login na sua " +
-                                "conta.",
-                            1: "O WSO2 IS usa atributos como seu nome, sobrenome, etc., para fornecer uma " +
-                                "experiência rica e personalizada ao usuário.",
-                            2: "O WSO2 IS usa suas perguntas e respostas de segurança apenas para permitir a " +
-                                "recuperação da conta."
-                        },
-                        para1: "O WSO2 IS coleta suas informações apenas para atender aos seus requisitos de " +
-                            "acesso. Por exemplo:"
-                    },
-                    heading: "Coleta de informações pessoais",
-                    trackingTechnologies: {
-                        description: {
-                            list1: {
-                                0: "Coletando informações da página de perfil do usuário em que você insere seus " +
-                                    "dados pessoais.",
-                                1: "Rastreando seu endereço IP com solicitação HTTP, cabeçalhos HTTP e TCP / IP.",
-                                2: "Rastreando suas informações geográficas com o endereço IP.",
-                                3: "Rastreando seu histórico de login com cookies do navegador. Por favor, consulte " +
-                                    "nosso {{cookiePolicyLink}} para obter mais informações."
-                            },
-                            para1: "O WSO2 IS coleta suas informações por:"
-                        },
-                        heading: "Tecnologias de rastreamento"
-                    }
-                },
-                description: {
-                    para1: "Esta política descreve como o WSO2 IS captura suas informações pessoais, os propósitos " +
-                        "de coleta e informações sobre a retenção de suas informações pessoais.",
-                    para2: "Observe que esta política é apenas para referência e é aplicável ao software como um " +
-                        "roduto. A WSO2 Inc. e seus desenvolvedores não têm acesso às informações mantidas no " +
-                        "WSO2 IS. Consulte a seção <1> isenção de responsabilidade </1> para obter mais informações.",
-                    para3: "Entidades, organizações ou indivíduos que controlam o uso e a administração do WSO2 IS " +
-                        "devem criar suas próprias políticas de privacidade, definindo a maneira pela qual os dados " +
-                        "são controlados ou processados ​​pela respectiva entidade, organização ou indivíduo."
-                },
-                disclaimer: {
-                    description: {
-                        list1: {
-                            0: "O WSO2, seus funcionários, parceiros e afiliados não têm acesso e não exigem, " +
-                                "armazenam, processam ou controlam nenhum dos dados, incluindo dados pessoais " +
-                                "contidos no WSO2 IS. Todos os dados, incluindo dados pessoais, são controlados " +
-                                "e processados ​​pela entidade ou indivíduo que executa o WSO2 IS. O WSO2, seus " +
-                                "funcionários parceiros e afiliados não são um processador de dados ou um " +
-                                "controlador de dados, de acordo com os regulamentos de privacidade de dados. " +
-                                "O WSO2 não fornece nenhuma garantia ou assume qualquer responsabilidade ou " +
-                                "obrigação relacionada à legalidade ou à maneira e aos propósitos pelos quais " +
-                                "o WSO2 IS é usado por essas entidades ou pessoas.",
-                            1: "Esta política de privacidade é para fins informativos da entidade ou pessoas que " +
-                                "executam o WSO2 IS e define os processos e a funcionalidade contidos no WSO2 IS em " +
-                                "relação à proteção de dados pessoais. É de responsabilidade das entidades e " +
-                                "pessoas que executam o WSO2 IS criar e administrar suas próprias regras e " +
-                                "processos que regem os dados pessoais dos usuários, e essas regras e processos " +
-                                "podem alterar as políticas de uso, armazenamento e divulgação aqui contidas. " +
-                                "Portanto, os usuários devem consultar a entidade ou pessoas que executam o " +
-                                "WSO2 IS para obter sua própria política de privacidade para obter detalhes sobre " +
-                                "os dados pessoais dos usuários."
-                        }
-                    },
-                    heading: "aviso Legal"
-                },
-                disclosureOfPersonalInfo: {
-                    description: "O WSO2 IS apenas divulga informações pessoais para os aplicativos relevantes " +
-                        "(também conhecidos como Provedor de Serviços) registrados no WSO2 IS. Esses aplicativos " +
-                        "são registrados pelo administrador de identidade de sua entidade ou organização. As " +
-                        "informações pessoais são divulgadas apenas para os fins para os quais foram coletadas " +
-                        "(ou para um uso identificado como consistente com essa finalidade), conforme controlado " +
-                        "por esses Provedores de Serviços, a menos que você tenha consentido de outra forma ou " +
-                        "onde seja exigido por lei.",
-                    heading: "Divulgação de informações pessoais",
-                    legalProcess: {
-                        description: "Observe que a organização, entidade ou indivíduo que executa o WSO2 IS " +
-                            "pode ser obrigado a divulgar suas informações pessoais com ou sem o seu consentimento, " +
-                            "quando exigidas por lei, após o devido e legal processo.",
-                        heading: "processo juridico"
-                    }
-                },
-                heading: "Política de Privacidade",
-                moreInfo: {
-                    changesToPolicy: {
-                        description: {
-                            para1: "As versões atualizadas do WSO2 IS podem conter alterações nesta política e " +
-                                "as revisões dessa política serão incluídas nessas atualizações. Tais alterações " +
-                                "se aplicariam apenas aos usuários que optarem por usar versões atualizadas.",
-                            para2: "A organização que executa o WSO2 IS pode revisar a Política de Privacidade de " +
-                                "tempos em tempos. Você pode encontrar a política de governo mais recente com o " +
-                                "respectivo link fornecido pela organização que executa o WSO2 IS. " +
-                                "A organização notificará quaisquer alterações na política de privacidade " +
-                                "nos nossos canais públicos oficiais."
-                        },
-                        heading: "Alterações nesta política"
-                    },
-                    contactUs: {
-                        description: {
-                            para1: "Entre em contato com o WSO2 se tiver alguma dúvida ou preocupação em relação " +
-                                "a esta política de privacidade."
-                        },
-                        heading: "Contate-Nos"
-                    },
-                    heading: "Mais Informações",
-                    yourChoices: {
-                        description: {
-                            para1: "Se você já possui uma conta de usuário no WSO2 IS, tem o direito de desativar " +
-                                "sua conta se achar que esta política de privacidade é inaceitável para você.",
-                            para2: "Se você não possui uma conta e não concorda com nossa política de privacidade, " +
-                                "pode optar por não criar uma."
-                        },
-                        heading: "Suas escolhas"
-                    }
-                },
-                storageOfPersonalInfo: {
-                    heading: "Armazenamento de informações pessoais",
-                    howLong: {
-                        description: {
-                            list1: {
-                                0: "Senha atual",
-                                1: "Senhas usadas anteriormente"
-                            },
-                            para1: "O WSO2 IS retém seus dados pessoais, desde que você seja um usuário ativo do " +
-                                "nosso sistema. Você pode atualizar seus dados pessoais a qualquer momento usando " +
-                                "os portais de usuário de autocuidado fornecidos.",
-                            para2: "O WSO2 IS pode manter segredos de hash para fornecer um nível adicional de " +
-                                "segurança. Isso inclui:"
-                        },
-                        heading: "Por quanto tempo suas informações pessoais são retidas"
-                    },
-                    requestRemoval: {
-                        description: {
-                            para1: "Você pode solicitar que o administrador exclua sua conta. O administrador é " +
-                                "o administrador do inquilino no qual você está registrado ou o superadministrador " +
-                                "se você não usar o recurso de inquilino.",
-                            para2: "Além disso, você pode solicitar para anonimizar todos os vestígios de suas " +
-                                "atividades que o WSO2 IS possa ter retido em logs, bancos de dados ou " +
-                                "armazenamento analítico."
-                        },
-                        heading: "Como solicitar a remoção de suas informações pessoais"
-                    },
-                    where: {
-                        description: {
-                            para1: "O WSO2 IS armazena suas informações pessoais em bancos de dados protegidos. " +
-                                "O WSO2 IS exerce medidas adequadas de segurança aceitas pelo setor para proteger " +
-                                "o banco de dados em que suas informações pessoais são mantidas. O WSO2 IS como " +
-                                "produto não transfere ou compartilha seus dados com terceiros ou locais.",
-                            para2: "O WSO2 IS pode usar criptografia para manter seus dados pessoais com um nível " +
-                                "adicional de segurança."
-                        },
-                        heading: "Onde suas informações pessoais são armazenadas"
-                    }
-                },
-                useOfPersonalInfo: {
-                    description: {
-                        list1: {
-                            0: "Para fornecer uma experiência personalizada ao usuário. O WSO2 IS usa seu nome e " +
-                                "as imagens de perfil carregadas para esse fim.",
-                            1: "Para proteger sua conta contra acesso não autorizado ou possíveis tentativas de " +
-                                "hackers. O WSO2 IS usa cabeçalhos HTTP ou TCP / IP para esse fim.",
-                            2: "Derivar dados estatísticos para fins analíticos nas melhorias de desempenho do " +
-                                "sistema. O WSO2 IS não manterá nenhuma informação pessoal após cálculos " +
-                                "estatísticos. Portanto, o relatório estatístico não tem como identificar " +
-                                "uma pessoa individualmente."
-                        },
-                        para1: "O WSO2 IS usará suas informações pessoais apenas para os fins para os quais " +
-                            "foram coletadas (ou para um uso identificado como consistente com esse objetivo).",
-                        para2: "O WSO2 IS usa suas informações pessoais apenas para os seguintes fins.",
-                        subList1: {
-                            heading: "Isso inclui:",
-                            list: {
-                                0: "endereço de IP",
-                                1: "Impressão digital do navegador",
-                                2: "Biscoitos"
-                            }
-                        },
-                        subList2: {
-                            heading: "WSO2 IS pode usar:",
-                            list: {
-                                0: "Endereço IP para obter informações geográficas",
-                                1: "Impressão digital do navegador para determinar a tecnologia ou / e a versão " +
-                                    "do navegador"
-                            }
-                        }
-                    },
-                    heading: "Uso de informações pessoais"
-                },
-                whatIsPersonalInfo: {
-                    description: {
-                        list1: {
-                            0: "Seu nome de usuário (exceto nos casos em que o nome de usuário criado por seu " +
-                                "empregador esteja sob contrato)",
-                            1: "Sua data de nascimento / idade",
-                            2: "Endereço IP usado para efetuar login",
-                            3: "O ID do seu dispositivo se você usar um dispositivo (por exemplo, telefone ou " +
-                                "tablet) para fazer login"
-                        },
-                        list2: {
-                            0: "Cidade / país de onde você originou a conexão TCP / IP",
-                            1: "Hora do dia em que você efetuou login (ano, mês, semana, hora ou minuto)",
-                            2: "Tipo de dispositivo que você usou para fazer login (por exemplo, telefone ou tablet)",
-                            3: "Sistema operacional e informações genéricas do navegador"
-                        },
-                        para1: "O WSO2 IS considera qualquer coisa relacionada a você e pela qual você pode ser " +
-                            "identificado como suas informações pessoais. Isso inclui, mas não se limita a:",
-                        para2: "No entanto, o WSO2 IS também coleta as seguintes informações que não são " +
-                            "consideradas informações pessoais, mas são usadas apenas para fins " +
-                            "<1> estatísticos </1>. A razão para isso é que essas informações não podem ser usadas " +
-                            "para rastrear você."
-                    },
-                    heading: "O que são informações pessoais?"
-                }
-            }
-        },
-        profile: {
-            fields: {
-                addressesHome: "Endereço residencial",
-                addressesWork: "Endereço de trabalho",
-                emails: "O email",
-                emailsHome: "E-mail residencial",
-                emailsOther: "Outro email",
-                emailsWork: "Email de trabalho",
-                generic: {
-                    default: "Adicionar {{fieldName}}"
-                },
-                nameFamilyName: "Último nome",
-                nameGivenName: "Primeiro nome",
-                phoneNumbers: "Número de telefone",
-                phoneNumbersHome: "Número de telefone residencial",
-                phoneNumbersMobile: "Número de celular",
-                phoneNumbersOther: "Outro número de telefone",
-                phoneNumbersWork: "Número de telefone comercial",
-                profileImage: "Imagem de perfil",
-                profileUrl: "URL",
-                userName: "Nome de usuário"
-            },
-            forms: {
-                emailChangeForm: {
-                    inputs: {
-                        email: {
-                            label: "O email",
-                            note: "NOTA: Isso mudará o endereço de email no seu perfil",
-                            placeholder: "Insira o seu endereço de email",
-                            validations: {
-                                empty: "O endereço de email é um campo obrigatório",
-                                invalidFormat: "O endereço de email não está no formato correto"
-                            }
-                        }
-                    }
-                },
-                generic: {
-                    inputs: {
-                        placeholder: "Insira o seu {{fieldName}}",
-                        validations: {
-                            empty: "{{fieldName}} é um campo obrigatório",
-                            invalidFormat: "The {{fieldName}} não está no formato correto"
-                        }
-                    }
-                },
-                mobileChangeForm: {
-                    inputs: {
-                        mobile: {
-                            label: "Número de celular",
-                            note: "NOTA: Isso mudará o número do celular em seu perfil",
-                            placeholder: "Digite seu número de celular",
-                            validations: {
-                                empty: "O número do celular é um campo obrigatório",
-                                invalidFormat: "O número do celular não está no formato correto"
-                            }
-                        }
-                    }
-                },
-                nameChangeForm: {
-                    inputs: {
-                        firstName: {
-                            label: "Primeiro nome",
-                            placeholder: "Digite o primeiro nome",
-                            validations: {
-                                empty: "O primeiro nome é um campo obrigatório"
-                            }
-                        },
-                        lastName: {
-                            label: "Último nome",
-                            placeholder: "Digite o sobrenome",
-                            validations: {
-                                empty: "O sobrenome é um campo obrigatório"
-                            }
-                        }
-                    }
-                },
-                organizationChangeForm: {
-                    inputs: {
-                        organization: {
-                            label: "Organização",
-                            placeholder: "Entre na sua organização",
-                            validations: {
-                                empty: "Organização é um campo obrigatório"
-                            }
-                        }
-                    }
-                }
-            },
-            messages: {
-                emailConfirmation: {
-                    content: "Please confirm the email address update in order to add the new email to your profile.",
-                    header: "Confirmation pending!"
-                }
-            },
-            notifications: {
-                getProfileInfo: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Ocorreu um erro ao recuperar os detalhes do perfil"
-                    },
-                    genericError: {
-                        description: "Ocorreu um erro ao recuperar os detalhes do perfil",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Os detalhes do perfil do usuário necessários são recuperados com sucesso",
-                        message: "Perfil de usuário recuperado com sucesso"
-                    }
-                },
-                getUserReadOnlyStatus: {
-                    genericError: {
-                        description: "Ocorreu um erro ao recuperar o status somente leitura do usuário",
-                        message: "Algo deu errado"
-                    }
-                },
-                updateProfileInfo: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Ocorreu um erro ao atualizar os detalhes do perfil"
-                    },
-                    genericError: {
-                        description: "Ocorreu um erro ao atualizar os detalhes do perfil",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Os detalhes do perfil de usuário necessários foram atualizados com sucesso",
-                        message: "Perfil de usuário atualizado com sucesso"
-                    }
-                }
-            },
-            placeholders: {
-                SCIMDisabled: {
-                    heading: "Este recurso não está disponível para sua conta."
-                }
-            }
-        },
-        profileExport: {
-            notifications: {
-                downloadProfileInfo: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Ocorreu um erro ao baixar os detalhes do perfil do usuário"
-                    },
-                    genericError: {
-                        description: "Ocorreu um erro ao baixar os detalhes do perfil do usuário",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "O arquivo que contém os detalhes necessários do perfil do usuário começou a " +
-                            "baixar",
-                        message: "Download dos detalhes do perfil do usuário iniciado"
-                    }
-                }
-            }
-        },
-        userAvatar: {
-            infoPopover: "Esta imagem foi recuperada do serviço <1>Gravatar</1>.",
-            urlUpdateHeader: "Insira um URL da imagem para definir sua foto de perfil"
-        },
-        userSessions: {
-            browserAndOS: "{{browser}} no {{os}} {{version}}",
-            dangerZones: {
-                terminate: {
-                    actionTitle: "Terminar",
-                    header: "Encerrar sessão",
-                    subheader: "Você será desconectado da sessão no dispositivo específico."
-                }
-            },
-            lastAccessed: "Último acesso {{date}}",
-            modals: {
-                terminateAllUserSessionsModal: {
-                    heading: "Confirmação",
-                    message: "Esta ação fará o logout de todas as sessões em todos os dispositivos. Você deseja " +
-                        "continuar?"
-                },
-                terminateUserSessionModal: {
-                    heading: "Confirmação",
-                    message: "Esta ação fará com que você saia da sessão no dispositivo específico. Você deseja " +
-                        "continuar?"
-                }
-            },
-            notifications: {
-                fetchSessions: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Erro ao recuperar a sessão do IDP"
-                    },
-                    genericError: {
-                        description: "Não foi possível recuperar nenhuma sessão do IDP",
-                        message: "Algo deu errado"
-                    },
-                    success: {
-                        description: "Recuperadas com sucesso as sessões do IDP",
-                        message: "Recuperação de sessão IDP bem-sucedida"
-                    }
-                },
-                terminateAllUserSessions: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Não foi possível encerrar as sessões do IDP"
-                    },
-                    genericError: {
-                        description: "Ocorreu um erro ao encerrar as sessões do IDP",
-                        message: "Não foi possível encerrar as sessões do IDP"
-                    },
-                    success: {
-                        description: "Terminou com êxito todas as sessões do IDP",
-                        message: "Terminou todas as sessões do IDP"
-                    }
-                },
-                terminateUserSession: {
-                    error: {
-                        description: "{{description}}",
-                        message: "Não foi possível encerrar a sessão do IDP"
-                    },
-                    genericError: {
-                        description: "Ocorreu um erro ao encerrar a sessão do IDP",
-                        message: "Não foi possível encerrar a sessão do IDP"
-                    },
-                    success: {
-                        description: "Encerrada com êxito a sessão do IDP",
-                        message: "Sessão finalizada com sucesso"
-                    }
-                }
-            }
+          actionTitles: {
+            manage: "Manage consents"
+          },
+          description: "Control the data you want to share with applications",
+          header: "Consents control"
         }
+      }
     },
-    modals: {
-        editAvatarModal: {
-            content: {
-                gravatar: {
-                    errors: {
-                        noAssociation: {
-                            content: "Parece que o email selecionado não está registrado no Gravatar. " +
-                                "Cadastre-se para uma conta do Gravatar visitando o site oficial do Gravatar ou " +
-                                "use um dos seguintes.",
-                            header: "Nenhuma imagem do Gravatar correspondente encontrada!"
-                        }
-                    },
-                    heading: "Gravatar baseado em "
-                },
-                hostedAvatar: {
-                    heading: "Imagem Hospedada",
-                    input: {
-                        errors: {
-                            http: {
-                                content: "O URL selecionado aponta para uma imagem não segura veiculada por HTTP. " +
-                                    "Prossiga com cuidado.",
-                                header: "Conteúdo inseguro!"
-                            },
-                            invalid: {
-                                content: "Insira um URL de imagem válido"
-                            }
-                        },
-                        hint: "Insira um URL de imagem válido que esteja hospedado em um local de terceiros.",
-                        placeholder: "Insira o URL da imagem.",
-                        warnings: {
-                            dataURL: {
-                                content: "Usar URLs de dados com grande contagem de caracteres pode resultar em " +
-                                    "problemas de banco de dados. Prossiga com cuidado.",
-                                header: "Verifique novamente o URL de dados inserido!"
-                            }
-                        }
-                    }
-                },
-                systemGenAvatars: {
-                    heading: "Avatar gerado pelo sistema",
-                    types: {
-                        initials: "Initials"
-                    }
-                }
+    privacy: {
+      about: {
+        description: "WSO2 Identity Server (referred to as “WSO2 IS” within this policy) is an open source " + "Identity Management and Entitlement Server that is based on open standards and specifications.",
+        heading: "About WSO2 Identity Server"
+      },
+      privacyPolicy: {
+        collectionOfPersonalInfo: {
+          description: {
+            list1: {
+              0: "WSO2 IS uses your IP address to detect any suspicious login attempts to your account.",
+              1: "WSO2 IS uses attributes like your first name, last name, etc., to provide a rich and" + " personalized user experience.",
+              2: "WSO2 IS uses your security questions and answers only to allow account recovery."
             },
-            description: null,
-            heading: "Atualizar foto de perfil",
-            primaryButton: "Salve",
-            secondaryButton: "Cancelar"
-        },
-        sessionTimeoutModal: {
-            description: "Você será desconectado da sessão atual devido à inatividade." +
-                "Selecione Permanecer conectado se desejar continuar a sessão.",
-            heading: "Você será desconectado em <1>{{ time }}</1>.",
-            primaryButton: "Permaneça logado",
-            secondaryButton: "Sair"
-        }
-    },
-    pages: {
-        applications: {
-            subTitle: "Manage and maintain your applications",
-            title: "Applications"
-        },
-        operations: {
-            subTitle: "Gerenciar e manter tarefas como aprovações pendentes etc.",
-            title: "Operações"
-        },
-        overview: {
-            subTitle: "Gerencie suas informações, segurança, privacidade e todas as configurações relacionadas",
-            title: "Bem-vindo, {{firstName}}"
-        },
-        personalInfo: {
-            subTitle: "Gerencie informações sobre você, seus sub-perfis e sua conta em geral",
-            title: "Informação pessoal"
-        },
-        privacy: {
-            subTitle: "",
-            title: "Política de Privacidade do Servidor de Identidade WSO2"
-        },
-        security: {
-            subTitle: "Atualize as configurações para tornar sua conta segura",
-            title: "Segurança"
-        }
-    },
-    placeholders: {
-        404: {
-            action: "Voltar para casa",
-            subtitles: {
-                0: "Não foi possível encontrar a página que você estava procurando.",
-                1: "Por favor, verifique o URL ou clique no botão abaixo para ser redirecionado de volta à página " +
-                    "inicial."
+            para1: "WSO2 IS collects your information only to serve your access requirements. For example:"
+          },
+          heading: "Collection of personal information",
+          trackingTechnologies: {
+            description: {
+              list1: {
+                0: "Collecting information from the user profile page where you enter your personal" + " data.",
+                1: "Tracking your IP address with HTTP request, HTTP headers, and TCP/IP.",
+                2: "Tracking your geographic information with the IP address.",
+                3: "Tracking your login history with browser cookies. Please see our" + " {{cookiePolicyLink}} for more information."
+              },
+              para1: "WSO2 IS collects your information by:"
             },
-            title: "página não encontrada"
+            heading: "Tracking Technologies"
+          }
         },
-        emptySearchResult: {
-            action: "Limpar consulta de pesquisa",
-            subtitles: {
-                0: "Não conseguimos encontrar resultados para \"{{query}}\"",
-                1: "Tente um termo de pesquisa diferente."
-            },
-            title: "Nenhum resultado encontrado"
+        description: {
+          para1: "This policy describes how WSO2 IS captures your personal information, the purposes of" + " collection, and information about the retention of your personal information.",
+          para2: "Please note that this policy is for reference only, and is applicable for the software " + "as a product. WSO2 Inc. and its developers have no access to the information held within " + "WSO2 IS. Please see the <1>disclaimer</1> section for more information.",
+          para3: "Entities, organizations or individuals controlling the use and administration of WSO2 IS " + "should create their own privacy policies setting out the manner in which data is controlled " + "or processed by the respective entity, organization or individual."
         },
-        genericError: {
-            action: "Recarregue a página",
-            subtitles: {
-                0: "Ocorreu um erro ao exibir esta página.",
-                1: "Consulte o console do navegador para obter detalhes técnicos."
-            },
-            title: "Algo deu errado"
-        },
-        loginError: {
-            action: "Continuar logout",
-            subtitles: {
-                0: "Parece que você não tem permissão para usar este portal.",
-                1: "Faça login com uma conta diferente."
-            },
-            title: "Você não está autorizado"
-        }
-    },
-    sections: {
-        accountRecovery: {
-            description: "Ver e gerenciar suas opções de recuperação de conta",
-            heading: "Recuperação de conta"
-        },
-        approvals: {
-            description: "Você pode gerenciar aprovações pendentes aqui",
-            heading: "Aprovações pendentes",
-            placeholders: {
-                emptyApprovalList: {
-                    heading: "Você não tem {{status}} aprovações pendentes"
-                }
+        disclaimer: {
+          description: {
+            list1: {
+              0: "WSO2, its employees, partners, and affiliates do not have access to and do not " + "require, store, process or control any of the data, including personal data " + "contained in WSO2 IS. All data, including personal data is controlled and " + "processed by the entity or individual running WSO2 IS. WSO2, its employees partners " + "and affiliates are not a data processor or a data controller within the meaning of " + "any data privacy regulations. WSO2 does not provide any warranties or undertake any " + "responsibility or liability in connection with the lawfulness or the manner and " + "purposes for which WSO2 IS is used by such entities or persons.",
+              1: "This privacy policy is for the informational purposes of the entity or persons " + "running WSO2 IS and sets out the processes and functionality contained within " + "WSO2 IS regarding personal data protection. It is the responsibility of entities " + "and persons running WSO2 IS to create and administer its own rules and processes " + "governing users' personal data, and such rules and processes may change the use, " + "storage and disclosure policies contained herein. Therefore users should consult " + "the entity or persons running WSO2 IS for its own privacy policy for details " + "governing users' personal data."
             }
+          },
+          heading: "Disclaimer"
         },
-        changePassword: {
-            actionTitles: {
-                change: "Mude sua senha"
-            },
-            description: "Alterar e modificar a senha existente",
-            heading: "Mudar senha"
+        disclosureOfPersonalInfo: {
+          description: "WSO2 IS only discloses personal information to the relevant applications (also " + "known as Service Provider) that are registered with WSO2 IS. These applications are " + "registered by the identity administrator of your entity or organization. Personal " + "information is disclosed only for the purposes for which it was collected (or for a " + "use identified as consistent with that purpose), as controlled by such Service Providers, " + "unless you have consented otherwise or where it is required by law.",
+          heading: "Disclosure of personal information",
+          legalProcess: {
+            description: "Please note that the organization, entity or individual running WSO2 IS may " + "be compelled to disclose your personal information with or without your consent when " + "it is required by law following due and lawful process.",
+            heading: "Legal process"
+          }
         },
-        consentManagement: {
-            actionTitles: {
-                empty: "Você não concedeu consentimento a nenhum aplicativo"
+        heading: "Privacy Policy",
+        moreInfo: {
+          changesToPolicy: {
+            description: {
+              para1: "Upgraded versions of WSO2 IS may contain changes to this policy and " + "revisions to this policy will be packaged within such upgrades. Such changes " + "would only apply to users who choose to use upgraded versions.",
+              para2: "The organization running WSO2 IS may revise the Privacy Policy from time to " + "time. You can find the most recent governing policy with the respective link " + "provided by the organization running WSO2 IS. The organization will notify " + "any changes to the privacy policy over our official public channels."
             },
-            description: "Ver e gerenciar aplicativos consentidos da sua conta",
-            heading: "Aplicações consentidas",
-            placeholders: {
-                emptyConsentList: {
-                    heading: "Você não concedeu consentimento a nenhum aplicativo"
-                }
+            heading: "Changes to this policy"
+          },
+          contactUs: {
+            description: {
+              para1: "Please contact WSO2 if you have any question or concerns regarding this privacy " + "policy."
+            },
+            heading: "Contact us"
+          },
+          heading: "More information",
+          yourChoices: {
+            description: {
+              para1: "If you are already have a user account within WSO2 IS, you have the right to " + "deactivate your account if you find that this privacy policy is unacceptable to you.",
+              para2: "If you do not have an account and you do not agree with our privacy policy, " + "you can choose not to create one."
+            },
+            heading: "Your choices"
+          }
+        },
+        storageOfPersonalInfo: {
+          heading: "Storage of personal information",
+          howLong: {
+            description: {
+              list1: {
+                0: "Current password",
+                1: "Previously used passwords"
+              },
+              para1: "WSO2 IS retains your personal data as long as you are an active user of our " + "system. You can update your personal data at any time using the given self-care " + "user portals.",
+              para2: "WSO2 IS may keep hashed secrets to provide you with an added level of security. " + "This includes:"
+            },
+            heading: "How long your personal information is retained"
+          },
+          requestRemoval: {
+            description: {
+              para1: "You can request the administrator to delete your account. The administrator is " + "the administrator of the tenant you are registered under, or the " + "super-administrator if you do not use the tenant feature.",
+              para2: "Additionally, you can request to anonymize all traces of your activities " + "that WSO2 IS may have retained in logs, databases or analytical storage."
+            },
+            heading: "How to request removal of your personal information"
+          },
+          where: {
+            description: {
+              para1: "WSO2 IS stores your personal information in secured databases. WSO2 IS " + "exercises proper industry accepted security measures to protect the database " + "where your personal information is held. WSO2 IS as a product does not transfer " + "or share your data with any third parties or locations.",
+              para2: "WSO2 IS may use encryption to keep your personal data with an added level " + "of security."
+            },
+            heading: "Where your personal information is stored"
+          }
+        },
+        useOfPersonalInfo: {
+          description: {
+            list1: {
+              0: "To provide you with a personalized user experience. WSO2 IS uses your name and " + "uploaded profile pictures for this purpose.",
+              1: "To protect your account from unauthorized access or potential hacking attempts. " + "WSO2 IS uses HTTP or TCP/IP Headers for this purpose.",
+              2: "Derive statistical data for analytical purposes on system performance improvements. " + "WSO2 IS will not keep any personal information after statistical calculations. " + "Therefore, the statistical report has no means of identifying an individual person."
+            },
+            para1: "WSO2 IS will only use your personal information for the purposes for which it was " + "collected (or for a use identified as consistent with that purpose).",
+            para2: "WSO2 IS uses your personal information only for the following purposes.",
+            subList1: {
+              heading: "This includes:",
+              list: {
+                0: "IP address",
+                1: "Browser fingerprinting",
+                2: "Cookies"
+              }
+            },
+            subList2: {
+              heading: "WSO2 IS may use:",
+              list: {
+                0: "IP Address to derive geographic information",
+                1: "Browser fingerprinting to determine the browser technology or/and version"
+              }
             }
+          },
+          heading: "Use of personal information"
         },
-        federatedAssociations: {
-            description: "Veja suas contas de outros provedores de identidade que estão vinculados a esta conta",
-            heading: "Logins externos"
-        },
-        linkedAccounts: {
-            actionTitles: {
-                add: "Adicionar Conta"
+        whatIsPersonalInfo: {
+          description: {
+            list1: {
+              0: "Your user name (except in cases where the user name created by your employer is " + "under contract)",
+              1: "Your date of birth/age",
+              2: "IP address used to log in",
+              3: "Your device ID if you use a device (e.g., phone or tablet) to log in"
             },
-            description: "Gerencie todas as suas contas vinculadas em um só lugar",
-            heading: "Contas ligadas"
-        },
-        mfa: {
-            description: "Ver e gerenciar suas opções de autenticação multifator",
-            heading: "Autenticação multifatorial"
-        },
-        profile: {
-            description: "Gerencie e atualize suas informações básicas de perfil",
-            heading: "Perfil"
-        },
-        profileExport: {
-            actionTitles: {
-                export: "Exportar dados do perfil"
+            list2: {
+              0: "City/Country from which you originated the TCP/IP connection",
+              1: "Time of the day that you logged in (year, month, week, hour or minute)",
+              2: "Type of device that you used to log in (e.g., phone or tablet)",
+              3: "Operating system and generic browser information"
             },
-            description: "Faça o download de todos os dados do seu perfil, incluindo dados pessoais, perguntas de " +
-                "segurança e consentimentos",
-            heading: "Exportar perfil"
-        },
-        userSessions: {
-            actionTitles: {
-                empty: "Nenhuma sessão ativa do IDP",
-                terminateAll: "Terminar todas as sessões"
-            },
-            description: "Revise todas as sessões IDP atualmente ativas em sua conta",
-            heading: "Sessões ativas do IDP",
-            placeholders: {
-                emptySessionList: {
-                    heading: "Não há sessões IDP ativas para este usuário"
-                }
-            }
+            para1: "WSO2 IS considers anything related to you, and by which you may be identified, as " + "your personal information. This includes, but is not limited to:",
+            para2: "However, WSO2 IS also collects the following information that is not considered " + "personal information, but is used only for <1>statistical</1> purposes. The reason " + "for this is that this information can not be used to track you."
+          },
+          heading: "What is personal information?"
         }
+      }
+    },
+    profile: {
+      fields: {
+        addressesHome: "Home address",
+        addressesWork: "Work address",
+        emails: "Email",
+        emailsHome: "Home email",
+        emailsOther: "Other email",
+        emailsWork: "Work email",
+        generic: {
+          default: "Add {{fieldName}}"
+        },
+        nameFamilyName: "Last name",
+        nameGivenName: "First name",
+        phoneNumbers: "Phone number",
+        phoneNumbersHome: "Home phone number",
+        phoneNumbersMobile: "Mobile number",
+        phoneNumbersOther: "Other phone number",
+        phoneNumbersWork: "Work phone number",
+        profileImage: "Profile Image",
+        profileUrl: "URL",
+        userName: "Username"
+      },
+      forms: {
+        emailChangeForm: {
+          inputs: {
+            email: {
+              label: "Email",
+              note: "NOTE: This will change the email address in your profile",
+              placeholder: "Enter your email address",
+              validations: {
+                empty: "Email address is a required field",
+                invalidFormat: "The email address is not of the correct format"
+              }
+            }
+          }
+        },
+        generic: {
+          inputs: {
+            placeholder: "Enter your {{fieldName}}",
+            validations: {
+              empty: "{{fieldName}} is a required field",
+              invalidFormat: "The {{fieldName}} is not of the correct format"
+            }
+          }
+        },
+        mobileChangeForm: {
+          inputs: {
+            mobile: {
+              label: "Mobile number",
+              note: "NOTE: This will change the mobile number in your profile",
+              placeholder: "Enter your mobile number",
+              validations: {
+                empty: "Mobile number is a required field",
+                invalidFormat: "The mobile number is not of the right format"
+              }
+            }
+          }
+        },
+        nameChangeForm: {
+          inputs: {
+            firstName: {
+              label: "First name",
+              placeholder: "Enter the first name",
+              validations: {
+                empty: "First name is a required field"
+              }
+            },
+            lastName: {
+              label: "Last name",
+              placeholder: "Enter the last name",
+              validations: {
+                empty: "Last name is a required field"
+              }
+            }
+          }
+        },
+        organizationChangeForm: {
+          inputs: {
+            organization: {
+              label: "Organization",
+              placeholder: "Enter your organization",
+              validations: {
+                empty: "Organization is a required field"
+              }
+            }
+          }
+        }
+      },
+      messages: {
+        emailConfirmation: {
+          content: "Please confirm the email address update in order to add the new email to your profile.",
+          header: "Confirmation pending!"
+        }
+      },
+      notifications: {
+        getProfileInfo: {
+          error: {
+            description: "{{description}}",
+            message: "Error occurred while retrieving the profile details"
+          },
+          genericError: {
+            description: "Error occurred while retrieving the profile details",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "The required user profile details are retrieved successfully",
+            message: "Successfully retrieved user profile"
+          }
+        },
+        getUserReadOnlyStatus: {
+          genericError: {
+            description: "Error occurred while retrieving the read-only status of the user",
+            message: "Something went wrong"
+          }
+        },
+        updateProfileInfo: {
+          error: {
+            description: "{{description}}",
+            message: "Error occurred while updating the profile details"
+          },
+          genericError: {
+            description: "Error occurred while updating the profile details",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "The required user profile details were successfully updated",
+            message: "User profile updated successfully"
+          }
+        }
+      },
+      placeholders: {
+        SCIMDisabled: {
+          heading: "This feature is not available for your account"
+        }
+      }
+    },
+    profileExport: {
+      notifications: {
+        downloadProfileInfo: {
+          error: {
+            description: "{{description}}",
+            message: "Error occurred while downloading the user profile details"
+          },
+          genericError: {
+            description: "Error occurred while downloading the user profile details",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "The file containing the required user profile details has started downloading",
+            message: "User profile details download started"
+          }
+        }
+      }
+    },
+    userAvatar: {
+      infoPopover: "This image has been retrieved from <1>Gravatar</1> service.",
+      urlUpdateHeader: "Enter an image URL to set your profile picture"
+    },
+    userSessions: {
+      browserAndOS: "{{browser}} on {{os}} {{version}}",
+      dangerZones: {
+        terminate: {
+          actionTitle: "Terminate",
+          header: "Terminate session",
+          subheader: "You will be logged out of the session on the particular device."
+        }
+      },
+      lastAccessed: "Last accessed {{date}}",
+      modals: {
+        terminateAllUserSessionsModal: {
+          heading: "Confirmation",
+          message: "This action will log you out of all the sessions on every device. Do you wish to " + "continue?"
+        },
+        terminateUserSessionModal: {
+          heading: "Confirmation",
+          message: "This action will log you out of the session on the particular device. Do you wish to " + "continue?"
+        }
+      },
+      notifications: {
+        fetchSessions: {
+          error: {
+            description: "{{description}}",
+            message: "Error retrieving IDP session"
+          },
+          genericError: {
+            description: "Couldn't retrieve any IDP sessions",
+            message: "Something went wrong"
+          },
+          success: {
+            description: "Successfully retrieved the IDP sessions",
+            message: "IDP session retrieval successful"
+          }
+        },
+        terminateAllUserSessions: {
+          error: {
+            description: "{{description}}",
+            message: "Couldn't terminate IDP sessions"
+          },
+          genericError: {
+            description: "Something went wrong while terminating IDP sessions",
+            message: "Couldn't terminate IDP sessions"
+          },
+          success: {
+            description: "Successfully terminated all IDP sessions",
+            message: "Terminated all IDP sessions"
+          }
+        },
+        terminateUserSession: {
+          error: {
+            description: "{{description}}",
+            message: "Couldn't terminate the IDP session"
+          },
+          genericError: {
+            description: "Something went wrong while terminating the IDP session",
+            message: "Couldn't terminate the IDP session"
+          },
+          success: {
+            description: "Successfully terminated the IDP session",
+            message: "Session terminate success"
+          }
+        }
+      }
     }
+  },
+  modals: {
+    editAvatarModal: {
+      content: {
+        gravatar: {
+          errors: {
+            noAssociation: {
+              content: "It seems like the selected email is not registered on Gravatar. " + "Sign up for a Gravatar account by visiting Gravatar official website or use " + "one of the following.",
+              header: "No matching Gravatar image found!"
+            }
+          },
+          heading: "Gravatar based on "
+        },
+        hostedAvatar: {
+          heading: "Hosted Image",
+          input: {
+            errors: {
+              http: {
+                content: "The selected URL points to an insecure image served over HTTP. " + "Please proceed with caution.",
+                header: "Insecure Content!"
+              },
+              invalid: {
+                content: "Please enter a valid image URL"
+              }
+            },
+            hint: "Enter a valid image URL which is hosted on a third party location.",
+            placeholder: "Enter URL for the image.",
+            warnings: {
+              dataURL: {
+                content: "Using Data URLs with large character count might result in database " + "issues. Proceed with caution.",
+                header: "Double check the entered Data URL!"
+              }
+            }
+          }
+        },
+        systemGenAvatars: {
+          heading: "System generated avatar",
+          types: {
+            initials: "Initials"
+          }
+        }
+      },
+      description: null,
+      heading: "Update profile picture",
+      primaryButton: "Save",
+      secondaryButton: "Cancel"
+    },
+    sessionTimeoutModal: {
+      description: "You will be logged out of the current session due to inactivity." + "Please choose Stay logged in if you would like to continue the session.",
+      heading: "You will be logged out in <1>{{ time }}</1>.",
+      primaryButton: "Stay logged in",
+      secondaryButton: "Logout"
+    }
+  },
+  pages: {
+    applications: {
+      subTitle: "Manage and maintain your applications",
+      title: "Applications"
+    },
+    operations: {
+      subTitle: "Review operational tasks that requires your approval",
+      title: "Operations"
+    },
+    overview: {
+      subTitle: "Manage your personal information, account security, and privacy",
+      title: "Welcome, {{firstName}}"
+    },
+    personalInfo: {
+      subTitle: "Edit and export your personal profile and manage linked accounts",
+      title: "Personal info"
+    },
+    privacy: {
+      subTitle: "",
+      title: "WSO2 Identity Server Privacy Policy"
+    },
+    security: {
+      subTitle: "Secure your account by managing consents, sessions, and security settings",
+      title: "Security"
+    }
+  },
+  placeholders: {
+    404: {
+      action: "Back to home",
+      subtitles: {
+        0: "We couldn't find the page you are looking for.",
+        1: "Please check the URL or click on the button below to be redirected back to the home page."
+      },
+      title: "Page not found"
+    },
+    emptySearchResult: {
+      action: "Clear search query",
+      subtitles: {
+        0: "We couldn't find any results for \"{{query}}\"",
+        1: "Please try a different search term."
+      },
+      title: "No results found"
+    },
+    genericError: {
+      action: "Refresh the page",
+      subtitles: {
+        0: "Something went wrong while displaying this page.",
+        1: "See the browser console for technical details."
+      },
+      title: "Something went wrong"
+    },
+    loginError: {
+      action: "Continue logout",
+      subtitles: {
+        0: "It seems like you don't have permission to use this portal.",
+        1: "Please sign in with a different account."
+      },
+      title: "You are not authorized"
+    }
+  },
+  sections: {
+    accountRecovery: {
+      description: "If you forget your password or username, recover your account " + "using email, SMS, or challenge questions",
+      heading: "Account recovery"
+    },
+    approvals: {
+      description: "Approve or deny tasks related to workflow operations like adding users, " + "updating user claims, deleting user roles, etc.",
+      heading: "Pending approvals",
+      placeholders: {
+        emptyApprovalList: {
+          heading: "You don't have any {{status}} pending approvals"
+        }
+      }
+    },
+    changePassword: {
+      actionTitles: {
+        change: "Change your password"
+      },
+      description: "Update your password regularly and make sure it's unique from other passwords you use.",
+      heading: "Change password"
+    },
+    consentManagement: {
+      actionTitles: {
+        empty: "You have not granted consent to any application"
+      },
+      description: "Revoke any consent given to an application or personal detail that you " + "have agreed to share",
+      heading: "Manage consents",
+      placeholders: {
+        emptyConsentList: {
+          heading: "You have not granted consent to any application"
+        }
+      }
+    },
+    federatedAssociations: {
+      description: "View your accounts from other identity providers that are linked with this account",
+      heading: "External Logins"
+    },
+    linkedAccounts: {
+      actionTitles: {
+        add: "Add account"
+      },
+      description: "Link/associate your other accounts, and access them seamlessly without re-login",
+      heading: "Linked accounts"
+    },
+    mfa: {
+      description: "Add an extra layer of protection to your account by configuring multiple " + "steps of authentication. You can choose from options like SMS or a security device",
+      heading: "Multi-factor authentication"
+    },
+    profile: {
+      description: "Manage and update your personal details like name, email, mobile number, organization, etc.",
+      heading: "Profile"
+    },
+    profileExport: {
+      actionTitles: {
+        export: "Download as JSON"
+      },
+      description: "Download all your profile data including personal data, security questions, and consents",
+      heading: "Export profile"
+    },
+    userSessions: {
+      actionTitles: {
+        empty: "No active IDP sessions",
+        terminateAll: "Terminate all sessions"
+      },
+      description: "Review all the identity provider sessions that are currently active on your account",
+      heading: "Active IDP sessions",
+      placeholders: {
+        emptySessionList: {
+          heading: "There are no active IDP sessions for this user"
+        }
+      }
+    }
+  }
 };
