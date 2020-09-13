@@ -22,24 +22,24 @@ export const adminPortal: AdminPortalNS = {
       form: {
         inputs: {
           filterAttribute: {
-            label: "Filter attribute",
-            placeholder: "E.g. Name, Description etc.",
+            label: "வடிகட்டும் பண்பு",
+            placeholder: "எ.கா.: பெயர், விவரம் போன்றவை.",
             validations: {
-              empty: "Filter attribute is a required field."
+              empty: "வடிகட்டல் பண்பு ஒரு கட்டாய களமாகும்."
             }
           },
           filterCondition: {
-            label: "Filter condition",
-            placeholder: "E.g. Starts with etc.",
+            label: "வடிகட்டும் நிபந்தனை",
+            placeholder: "எ.கா.: தொடங்குவது.",
             validations: {
-              empty: "Filter condition is a required field."
+              empty: "வடிகட்டும் நிபந்தனை ஒரு கட்டாய களமாகும்."
             }
           },
           filterValue: {
-            label: "Filter value",
-            placeholder: "E.g. admin, wso2 etc.",
+            label: "வடிகட்டும் மதிப்பு",
+            placeholder: "எ.கா.: admin, wso2 போன்றவை.",
             validations: {
-              empty: "Filter value is a required field."
+              empty: "வடிகட்டும் மதிப்பு ஒரு கட்டாய களமாகும்."
             }
           }
         }
@@ -47,15 +47,15 @@ export const adminPortal: AdminPortalNS = {
       hints: {
         querySearch: {
           actionKeys: "Shift + Enter",
-          label: "To search as a query"
+          label: "கேள்வியின் மூலம் தேடுவதற்கு"
         }
       },
       options: {
-        header: "Advanced search"
+        header: "மேம்பட்ட தேடல்"
       },
-      placeholder: "Search by {{attribute}}",
+      placeholder: "பெயரைக் கொண்டு தேடு",
       popups: {
-        clear: "clear search",
+        clear: "தேடலை அழி",
         dropdown: "Show options"
       },
       resultsIndicator: "Showing results for the query \"{{query}}\""
