@@ -494,7 +494,7 @@ export const adminPortal: AdminPortalNS = {
           },
           emptySearch: {
             action: "Clear search query",
-            subtitle: "We couldn't find any results for {{searchQuery}}." + "Please try a different search term.",
+            subtitle: "We couldn't find any results for {{searchQuery}}. " + "Please try a different search term.",
             title: "No results found"
           }
         },
@@ -2371,7 +2371,7 @@ export const adminPortal: AdminPortalNS = {
         },
         emptySearch: {
           action: "Clear search query",
-          subtitles: "We couldn't find any results for {{searchQuery}}. " + "Please try a different search term.",
+          subtitles: "We couldn't find any results for {{searchQuery}}." + "Please try a different search term.",
           title: "No results found"
         }
       },
