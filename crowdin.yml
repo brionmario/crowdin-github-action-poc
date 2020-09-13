@@ -31,7 +31,7 @@ files: [
   # Files or directories for ignore
   # e.g. ["/**/?.txt", "/**/[0-9].txt", "/**/*\?*.txt"]
   #
-  "ignore" : [ "/**/index.ts", "/**/meta.ts" ],
+  # "ignore" : [],
 
   #
   # The dest allows you to specify a file name in Crowdin
