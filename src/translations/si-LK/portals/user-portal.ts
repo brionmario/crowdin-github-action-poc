@@ -21,99 +21,99 @@ export const userPortal: UserPortalNS = {
     accountRecovery: {
       codeRecovery: {
         descriptions: {
-          add: "Add or update code recovery options"
+          add: "කේත ප්‍රතිසාධන විකල්ප එකතු කිරීම හෝ යාවත්කාලීන කිරීම"
         },
-        heading: "Code Recovery"
+        heading: "කේත ප්‍රතිසාධනය"
       },
       emailRecovery: {
         descriptions: {
-          add: "Add or update recovery email address",
-          update: "Update recovery email address ({{email}})"
+          add: "ප්‍රතිසාධන ඊමේල් තැපැල් ලිපිනයක් එක් කරන්න",
+          update: "ප්‍රතිසාධන ඊමේල් තැපැල් ලිපිනය යාවත්කාලීන කරන්න ({{email}})"
         },
         forms: {
           emailResetForm: {
             inputs: {
               email: {
-                label: "Email address",
-                placeholder: "Enter the recovery email address",
+                label: "ඊමේල් ලිපිනය",
+                placeholder: "ප්‍රතිසාධන ඊමේල් ලිපිනය ඇතුළත් කරන්න",
                 validations: {
-                  empty: "Enter an email address",
-                  invalidFormat: "The email address is not of the correct format"
+                  empty: "ඊමේල් ලිපිනයක් ඇතුළත් කරන්න",
+                  invalidFormat: "ඊමේල් ලිපිනය නිවැරදි ආකෘතියෙන් නොවේ"
                 }
               }
             }
           }
         },
-        heading: "Email recovery",
+        heading: "ඊමේල් ප්‍රතිසාධනය",
         notifications: {
           updateEmail: {
             error: {
               description: "{{description}}",
-              message: "Error updating the recovery email"
+              message: "ප්‍රතිසාධන ඊමේල් ලිපිනය යාවත්කාලීන කිරීමේදී දෝෂයක් ඇතිවිය"
             },
             genericError: {
-              description: "Error occurred while updating the recovery email",
-              message: "Something went wrong"
+              description: "ප්‍රතිසාධන ඊමේල් ලිපිනය යාවත්කාලීන කිරීමේදී දෝෂයක් ඇතිවිය",
+              message: "දෝෂයක් ඇතිවිය !!!"
             },
             success: {
-              description: "The email address in the user profile has been updated successfully",
-              message: "Email Address Updated Successfully"
+              description: "පරිශීලක පැතිකඩෙහි ඊමේල් ලිපිනය සාර්ථකව යාවත්කාලීන කර ඇත",
+              message: "ඊමේල් ලිපිනය සාර්ථකව යාවත්කාලීන කර ඇත"
             }
           }
         }
       },
       questionRecovery: {
         descriptions: {
-          add: "Add or update account recovery challenge questions"
+          add: "ගිණුම් ප්‍‍රතිසාධන අභියෝග ප්‍‍රශ්න එකතු කිරීම හා යාවත්කාලීන කිරීම"
         },
         forms: {
           securityQuestionsForm: {
             inputs: {
               answer: {
-                label: "Answer",
-                placeholder: "Enter your answer",
+                label: "පිළිතුර",
+                placeholder: "ඔබේ පිළිතුර ඇතුළත් කරන්න",
                 validations: {
-                  empty: "Answer is a required field"
+                  empty: "පිළිතුර අත්‍යවශ්‍ය ක්ෂේත්‍රයකි"
                 }
               },
               question: {
-                label: "Question",
-                placeholder: "Select a security question",
+                label: "ප්‍රශ්නය",
+                placeholder: "ආරක්ෂක ප්‍රශ්නයක් තෝරන්න",
                 validations: {
-                  empty: "At least one security question must be selected"
+                  empty: "අවම වශයෙන් එක් ආරක්ෂක ප්‍රශ්නයක්වත් තෝරා ගත යුතුය"
                 }
               }
             }
           }
         },
-        heading: "Security questions",
+        heading: "ආරක්ෂක ප්‍රශ්න",
         notifications: {
           addQuestions: {
             error: {
               description: "{{description}}",
-              message: "Error occurred while adding the security questions"
+              message: "ආරක්ෂක ප්‍රශ්න වින්‍යාස කිරීමේදී දෝෂයක් ඇතිවිය"
             },
             genericError: {
-              description: "Error occurred while adding the security questions",
-              message: "Something went wrong."
+              description: "ආරක්ෂක ප්‍රශ්න වින්‍යාස කිරීමේදී දෝෂයක් ඇතිවිය",
+              message: "දෝෂයක් ඇතිවිය !!!"
             },
             success: {
-              description: "The required security questions were added successfully",
-              message: "Security questions were successfully added"
+              description: "අවශ්‍ය ආරක්ෂක ප්‍රශ්න සාර්ථකව එකතු කරන ලදි",
+              message: "ආරක්ෂක ප්‍රශ්න සාර්ථකව එකතු කරන ලදි"
             }
           },
           updateQuestions: {
             error: {
               description: "{{description}}",
-              message: "Error updating the security questions"
+              message: "ආරක්ෂක ප්‍රශ්න යාවත්කාලීන කිරීමේදී දෝෂයක් ඇතිවිය"
             },
             genericError: {
-              description: "Error occurred while updating the security questions",
-              message: "Something went wrong."
+              description: "ආරක්ෂක ප්‍රශ්න යාවත්කාලීන කිරීමේදී දෝෂයක් ඇතිවිය",
+              message: "දෝෂයක් ඇතිවිය !!!"
             },
             success: {
-              description: "The required security questions were updated successfully",
-              message: "Security Questions were successfully updated"
+              description: "අවශ්‍ය ආරක්ෂක ප්‍රශ්න සාර්ථකව යාවත්කාලීන කරන ලදි",
+              message: "ආරක්ෂක ප්‍රශ්න සාර්ථකව යාවත්කාලීන කරන ලදි"
             }
           }
         }
@@ -123,24 +123,24 @@ export const userPortal: UserPortalNS = {
       form: {
         inputs: {
           filterAttribute: {
-            label: "Filter attribute",
-            placeholder: "E.g. Name, Description etc.",
+            label: "පෙරහන් ගුණාංගය",
+            placeholder: "උදා: නම, විස්තරය ආදිය.",
             validations: {
-              empty: "Filter attribute is a required field."
+              empty: "පෙරහන් ගුණාංගය අවශ්‍ය ක්ෂේත්‍රයකි"
             }
           },
           filterCondition: {
-            label: "Filter condition",
-            placeholder: "E.g. Starts with etc.",
+            label: "පෙරහන් තත්වය",
+            placeholder: "උදා: සමඟ ආරම්භ වේ.",
             validations: {
-              empty: "Filter condition is a required field."
+              empty: "පෙරහන් තත්ත්වය අත්‍යවශ්‍ය ක්ෂේත්‍රයකි"
             }
           },
           filterValue: {
-            label: "Filter value",
-            placeholder: "E.g. admin, wso2 etc.",
+            label: "පෙරහන් අගය",
+            placeholder: "උදා: admin, wso2 ආදිය.",
             validations: {
-              empty: "Filter value is a required field."
+              empty: "පෙරහන් අගය අත්‍යවශ්‍ය ක්ෂේත්‍රයකි"
             }
           }
         }
@@ -148,71 +148,71 @@ export const userPortal: UserPortalNS = {
       hints: {
         querySearch: {
           actionKeys: "Shift + Enter",
-          label: "To search as a query"
+          label: "විමසුමක් ලෙස සෙවීමට"
         }
       },
       options: {
-        header: "Advanced search"
+        header: "සංකීර්ණ සෙවීම"
       },
-      placeholder: "Search by {{attribute}}",
+      placeholder: "නමින් සොයන්න",
       popups: {
-        clear: "clear search",
-        dropdown: "Show options"
+        clear: "මකන්න",
+        dropdown: "විකල්ප පෙන්වන්න"
       },
-      resultsIndicator: "Showing results for the query \"{{query}}\""
+      resultsIndicator: "{{query}} සඳහා ප්රතිපල"
     },
     applications: {
       advancedSearch: {
         form: {
           inputs: {
             filterAttribute: {
-              placeholder: "E.g. Name, Description etc."
+              placeholder: "උදා: නම, විස්තරය ආදිය."
             },
             filterCondition: {
-              placeholder: "E.g. Starts with etc."
+              placeholder: "උදා: සමඟ ආරම්භ වේ."
             },
             filterValue: {
-              placeholder: "E.g. Zoom, Salesforce etc."
+              placeholder: "උදා: admin, wso2 ආදිය."
             }
           }
         },
-        placeholder: "Search by application name"
+        placeholder: "නමින් සොයන්න"
       },
       all: {
-        heading: "All Applications"
+        heading: "සියලුම ඇප්ස්"
       },
       favourite: {
-        heading: "Favourites"
+        heading: "ප්රියතම ඇප්ස්"
       },
       notifications: {
         fetchApplications: {
           error: {
             description: "{{description}}",
-            message: "Error retrieving applications"
+            message: "ඇප්ස් ලබා ගැනීමේ දෝෂයකි"
           },
           genericError: {
-            description: "Couldn't retrieve applications",
-            message: "Something went wrong"
+            description: "ඇප්ස් ලබා ගැනීමේ දෝෂයකි",
+            message: "දෝෂයක් ඇතිවිය"
           },
           success: {
-            description: "Successfully retrieved the applications.",
-            message: "Applications retrieval successful"
+            description: "ඇප්ස් සාර්ථකව ලබා ගන්නා ලදි.",
+            message: "සාර්ථකයි"
           }
         }
       },
       placeholders: {
         emptyList: {
-          action: "Refresh list",
+          action: "ලැයිස්තුව නැවුම් කරන්න",
           subtitles: {
             0: "The applications list returned empty.",
             1: "This could be due to having no discoverable applications.",
             2: "Please ask an admin to enable discoverability for applications."
           },
-          title: "No Applications"
+          title: "ඇප්ස් නොමැත"
         }
       },
       recent: {
-        heading: "Recent Applications"
+        heading: "මෑතකදී විවෘත කළ ඇප්ස්"
       }
     },
     approvals: {
@@ -220,43 +220,43 @@ export const userPortal: UserPortalNS = {
         fetchApprovalDetails: {
           error: {
             description: "{{description}}",
-            message: "Error retrieving the approval details"
+            message: "අනුමත තොරතුරු ලබා ගැනීමේදී දෝෂයක් ඇතිවිය"
           },
           genericError: {
-            description: "Couldn't update the approval details",
-            message: "Something went wrong"
+            description: "අනුමත තොරතුරු යාවත්කාලීන කිරීමට නොහැකි විය",
+            message: "දෝෂයක් ඇතිවිය !!!"
           },
           success: {
-            description: "Successfully retrieved the approval details",
-            message: "Approval details retrieval successful"
+            description: "අනුමත තොරතුරු සාර්ථකව ලබා ගන්නා ලදි",
+            message: "අනුමත තොරතුරු ලබා ගැනීම සාර්ථකයි"
           }
         },
         fetchPendingApprovals: {
           error: {
             description: "{{description}}",
-            message: "Error retrieving pending approvals"
+            message: "අපේක්ෂිත අනුමැතිය ලබා ගැනීමේ දෝෂයකි"
           },
           genericError: {
-            description: "Couldn't retrieve pending approvals",
-            message: "Something went wrong"
+            description: "අපේක්ෂිත අනුමත ලබා ගැනීමට නොහැකි විය",
+            message: "දෝෂයක් ඇතිවිය !!!"
           },
           success: {
-            description: "Successfully retrieved pending approvals",
-            message: "Pending approvals retrieval successful"
+            description: "අපේක්ෂිත අනුමත කිරීම් සාර්ථකව ලබා ගන්නා ලදි",
+            message: "අපේක්ෂිත අනුමත කිරීම් නැවත ලබා ගැනීම සාර්ථකයි"
           }
         },
         updatePendingApprovals: {
           error: {
             description: "{{description}}",
-            message: "Error updating the approval"
+            message: "අනුමැතිය යාවත්කාලීන කිරීමේදී දෝෂයකි"
           },
           genericError: {
-            description: "Couldn't update the approval",
-            message: "Something went wrong"
+            description: "අනුමැතිය යාවත්කාලීන කළ නොහැක",
+            message: "දෝෂයක් ඇතිවිය !!!"
           },
           success: {
-            description: "Successfully updated the approval",
-            message: "Update successful"
+            description: "අනුමැතිය සාර්ථකව යාවත්කාලීන කරන ලදි",
+            message: "යාවත්කාලීන කිරීම සාර්ථකයි"
           }
         }
       }
@@ -266,133 +266,133 @@ export const userPortal: UserPortalNS = {
         passwordResetForm: {
           inputs: {
             confirmPassword: {
-              label: "Confirm password",
-              placeholder: "Enter the new password",
+              label: "මුරපදය තහවුරු කරන්න",
+              placeholder: "නව මුරපදය ඇතුළත් කරන්න",
               validations: {
-                empty: "Confirm password is a required field",
-                mismatch: "The password confirmation doesn't match"
+                empty: "මුරපදය තහවුරු කිරීම අත්‍යවශ්‍ය ක්ෂේත්‍රයකි",
+                mismatch: "මුරපද තහවුරු කිරීම නොගැලපේ"
               }
             },
             currentPassword: {
-              label: "Current password",
-              placeholder: "Enter the current password",
+              label: "වත්මන් මුරපදය",
+              placeholder: "වත්මන් මුරපදය ඇතුළත් කරන්න",
               validations: {
-                empty: "Current password is a required field",
-                invalid: "Current password is invalid"
+                empty: "වත්මන් මුරපදය අත්‍යවශ්‍ය ක්ෂේත්‍රයකි",
+                invalid: "වත්මන් මුරපදය අවලංගුය"
               }
             },
             newPassword: {
-              label: "New password",
-              placeholder: "Enter the new password",
+              label: "නව මුරපදය",
+              placeholder: "නව මුරපදය ඇතුළත් කරන්න",
               validations: {
-                empty: "New password is a required field"
+                empty: "නව මුරපදය අත්‍යවශ්‍ය ක්ෂේත්‍රයකි"
               }
             }
           },
           validations: {
             genericError: {
-              description: "Something went wrong. Please try again",
-              message: "Change password error"
+              description: "දෝෂයක් ඇතිවිය!! කරුණාකර නැවත උත්සාහ කරන්න",
+              message: "මුරපද වෙනස් කිරීමේ දෝෂයකි"
             },
             invalidCurrentPassword: {
-              description: "The current password you entered appears to be invalid. Please try again",
-              message: "Change password error"
+              description: "ඔබ ඇතුලත් කළ මුරපදය අවලංගු බව පෙනේ. කරුණාකර නැවත උත්සාහ කරන්න",
+              message: "මුරපද වෙනස් කිරීමේ දෝෂයකිි"
             },
             submitError: {
               description: "{{description}}",
-              message: "Change password error"
+              message: "මුරපද වෙනස් කිරීමේ දෝෂයකි"
             },
             submitSuccess: {
-              description: "The password has been changed successfully",
-              message: "Password reset successful"
+              description: "මුරපදය සාර්ථකව වෙනස් කර ඇත",
+              message: "මුරපද යළි පිහිටුවීම සාර්ථකයි"
             }
           }
         }
       },
       modals: {
         confirmationModal: {
-          heading: "Confirmation",
+          heading: "තහවුරු කිරීම",
           message: "Changing the password will result in the termination of the current session. You will " + "have to login with the newly changed password. Do you wish to continue?"
         }
       }
     },
     consentManagement: {
       editConsent: {
-        collectionMethod: "Collection Method",
+        collectionMethod: "ගොනුකිරීමේ ක්‍රමය",
         dangerZones: {
           revoke: {
-            actionTitle: "Revoke",
-            header: "Revoke consent",
-            subheader: "You will have to provide consent for this application again."
+            actionTitle: "අවලංගු කරන්න",
+            header: "කැමැත්ත අවලංගු කරන්න",
+            subheader: "ඔබට මෙම ඇප් එක සඳහා නැවත කැමැත්ත ලබා දීමට සිදුවේ."
           }
         },
-        description: "Description",
+        description: "සටහන",
         piiCategoryHeading: "Manage consent for the collection and sharing of your personal information " + "with the application. Uncheck the attributes that you need to revoke and press the update " + "button to save the changes or press the revoke button to remove the consent for all the " + "attributes.",
-        state: "State",
-        version: "Version"
+        state: "තත්වය",
+        version: "පිටපත"
       },
       modals: {
         consentRevokeModal: {
-          heading: "Are you sure?",
+          heading: "ඔබට විශ්වාසද?",
           message: "This operation is not reversible. This will permanently revoke consent for all the " + "attributes. Are you sure you want to proceed?",
-          warning: "Please note that you will be redirected to the login consent page"
+          warning: "ඔබ පිවිසුම් කැමැත්ත පිටුවට හරවා යවන බව කරුණාවෙන් සලකන්න"
         }
       },
       notifications: {
         consentReceiptFetch: {
           error: {
             description: "{{description}}",
-            message: "Something went wrong"
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           genericError: {
-            description: "Couldn't load information on the selected application",
-            message: "Something went wrong"
+            description: "තෝරාගත් යෙදුමේ තොරතුරු පූරණය කළ නොහැක",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "Successfully retrieved the consent receipt",
-            message: "Successful retrieval"
+            description: "අනුමත රිසිට්පත සාර්ථකව ලබා ගන්නා ලදි",
+            message: "නැවත ලබා ගැනීම සාර්ථකයි"
           }
         },
         consentedAppsFetch: {
           error: {
             description: "{{description}}",
-            message: "Something went wrong"
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           genericError: {
-            description: "Couldn't load the list of consented applications",
-            message: "Something went wrong"
+            description: "අනුමත යෙදුම් ලැයිස්තුව පූරණය කළ නොහැක",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "Successfully retrieved the consented applications list",
-            message: "Successful retrieval"
+            description: "අනුමත යෙදුම් ලැයිස්තුව සාර්ථකව ලබා ගන්නා ලදි",
+            message: "නැවත ලබා ගැනීම සාර්ථකයි"
           }
         },
         revokeConsentedApp: {
           error: {
             description: "{{description}}",
-            message: "Consents Revoke Error"
+            message: "අනුමැතිය අවලංගු කිරීමේ දෝෂයකි"
           },
           genericError: {
-            description: "Couldn't revoke consent for the application",
-            message: "Something went wrong"
+            description: "යෙදුම සඳහාවූ අනුමැතිය අවලංගු කිරීමට නොහැකි විය.",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "The consent has been successfully revoked for the application",
-            message: "Consents Revoke Success"
+            description: "යෙදුම සඳහාවූ අනුමැතිය සාර්ථකව අවලංගු කර ඇත",
+            message: "අනුමැතිය අවලංගු කිරීම සාර්ථකය"
           }
         },
         updateConsentedClaims: {
           error: {
             description: "{{description}}",
-            message: "Something went wrong"
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           genericError: {
-            description: "The consented claims failed to update for the application",
-            message: "Something went wrong"
+            description: "යෙදුම සඳහා එකඟ වූ හිමිකම් යාවත්කාලීන කිරීමට අසමත් විය",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "The consented claims have been successfully updated for the application",
-            message: "Consented claims updated successfully"
+            description: "යෙදුම සඳහා එකඟ වූ හිමිකම් සාර්ථකව යාවත්කාලීන කර ඇත",
+            message: "අනුමත හිමිකම් සාර්ථකව යාවත්කාලීන කරන ලදි"
           }
         }
       }
@@ -403,43 +403,43 @@ export const userPortal: UserPortalNS = {
         getFederatedAssociations: {
           error: {
             description: "{{description}}",
-            message: "Something went wrong"
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           genericError: {
-            description: "Couldn't retrieve External Logins",
-            message: "Something went wrong"
+            description: "බාහිර පිවිසුම් ලබා ගැනීමට නොහැකි විය",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "External Logins have been retrieved successfully",
-            message: "External Logins retrieved successfully"
+            description: "බාහිර පිවිසුම් සාර්ථකව ලබාගෙන ඇත",
+            message: "බාහිර පිවිසුම් සාර්ථකව ලබා ගන්නා ලදි"
           }
         },
         removeAllFederatedAssociations: {
           error: {
             description: "{{description}}",
-            message: "Something went wrong"
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           genericError: {
-            description: "External Logins couldn't be removed",
-            message: "Something went wrong"
+            description: "බාහිර පිවිසුම් ඉවත් කළ නොහැක",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "All the External Logins have been removed successfully",
-            message: "External Logins removed successfully"
+            description: "සියලුම බාහිර පිවිසුම් සාර්ථකව ඉවත් කර ඇත",
+            message: "බාහිර පිවිසුම් සාර්ථකව ඉවත් කරන ලදි"
           }
         },
         removeFederatedAssociation: {
           error: {
             description: "{{description}}",
-            message: "Something went wrong"
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           genericError: {
-            description: "The External Login couldn't be removed",
-            message: "Something went wrong"
+            description: "බාහිර පිවිසුම ඉවත් කළ නොහැක",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "The External Login has been removed successfully",
-            message: "The External Login removed successfully"
+            description: "බාහිර පිවිසුම සාර්ථකව ඉවත් කර ඇත",
+            message: "බාහිර පිවිසුම සාර්ථකව ඉවත් කරන ලදි"
           }
         }
       }
@@ -450,7 +450,7 @@ export const userPortal: UserPortalNS = {
     linkedAccounts: {
       accountTypes: {
         local: {
-          label: "Add local user account"
+          label: "ස්ථානික පරිශීලක ගිණුම එක් කරන්න"
         }
       },
       deleteConfirmation: "This will remove the linked account from your account. Do you want to continue " + "removing?",
@@ -458,17 +458,17 @@ export const userPortal: UserPortalNS = {
         addAccountForm: {
           inputs: {
             password: {
-              label: "Password",
-              placeholder: "Enter the password",
+              label: "මුරපදය",
+              placeholder: "මුරපදය ඇතුළත් කරන්න",
               validations: {
-                empty: "Password is a required field"
+                empty: "මුරපදය අත්‍යවශ්‍ය ක්ෂේත්‍රයකි"
               }
             },
             username: {
-              label: "Username",
-              placeholder: "Enter the username",
+              label: "පරිශීලක නාමය",
+              placeholder: "පරිශීලක නාමය ඇතුළත් කරන්න",
               validations: {
-                empty: "Username is a required field"
+                empty: "ඇතුළත් කරන්න අත්‍යවශ්‍ය ක්ෂේත්‍රයකි"
               }
             }
           }
@@ -478,71 +478,71 @@ export const userPortal: UserPortalNS = {
         addAssociation: {
           error: {
             description: "{{description}}",
-            message: "Error retrieving linked user accounts"
+            message: "සම්බන්ධිත පරිශීලක ගිණුම් ලබා ගැනීමේ දෝෂයකි"
           },
           genericError: {
-            description: "Error occurred while adding the linked account",
-            message: "Something went wrong"
+            description: "සම්බන්ධිත ගිණුම එකතු කිරීමේදී දෝෂයක් ඇතිවිය",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "The required linked user account added successfully",
-            message: "Linked user account added successfully"
+            description: "අවශ්‍ය සම්බන්ධිත පරිශීලක ගිණුම සාර්ථකව එකතු කරන ලදි",
+            message: "සම්බන්ධිත පරිශීලක ගිණුම සාර්ථකව එක් කරන ලදි"
           }
         },
         getAssociations: {
           error: {
             description: "{{description}}",
-            message: "Error retrieving linked user accounts"
+            message: "සම්බන්ධිත පරිශීලක ගිණුම් ලබා ගැනීමේ දෝෂයකි"
           },
           genericError: {
-            description: "Error occurred while retrieving the linked user accounts",
-            message: "Something went wrong"
+            description: "සම්බන්ධිත පරිශීලක ගිණුම් ලබා ගැනීමේදී දෝෂයක් ඇතිවිය",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "The required user profile details are retrieved successfully",
-            message: "Linked user accounts retrieved successfully"
+            description: "අවශ්‍ය පරිශීලක පැතිකඩ විස්තර සාර්ථකව ලබා ගන්නා ලදි",
+            message: "සම්බන්ධිත පරිශීලක ගිණුම් සාර්ථකව ලබා ගන්නා ලදි"
           }
         },
         removeAllAssociations: {
           error: {
             description: "{{description}}",
-            message: "Error removing linked user accounts"
+            message: "සම්බන්ධිත පරිශීලක ගිණුම් ඉවත් කිරීමේ දෝෂයකිs"
           },
           genericError: {
-            description: "Error occurred while removing the linked user accounts",
-            message: "Something went wrong"
+            description: "සම්බන්ධිත පරිශීලක ගිණුම් ඉවත් කිරීමේදී දෝෂයක් ඇතිවිය",
+            message: "දෝෂයක් ඇතිවිය"
           },
           success: {
-            description: "All the linked user accounts have been removed",
-            message: "Linked accounts removed successfully"
+            description: "සම්බන්ධිත සියලුම පරිශීලක ගිණුම් ඉවත් කර ඇත",
+            message: "සම්බන්ධිත ගිණුම් සාර්ථකව ඉවත් කරන ලදි"
           }
         },
         removeAssociation: {
           error: {
             description: "{{description}}",
-            message: "Error removing the linked user account"
+            message: "සම්බන්ධිත පරිශීලක ගිණුම ඉවත් කිරීමේ දෝෂයකි"
           },
           genericError: {
-            description: "Error occurred while removing the linked user account",
-            message: "Something went wrong"
+            description: "සම්බන්ධිත පරිශීලක ගිණුම ඉවත් කිරීමේදී දෝෂයක් ඇතිවිය",
+            message: "දෝෂයක් ඇතිවිය"
           },
           success: {
-            description: "The linked user accounts have been removed",
-            message: "Linked account removed successfully"
+            description: "සම්බන්ධිත පරිශීලක ගිණුම් ඉවත් කර ඇත",
+            message: "සම්බන්ධිත ගිණුම සාර්ථකව ඉවත් කරන ලදි"
           }
         },
         switchAccount: {
           error: {
             description: "{{description}}",
-            message: "Error occurred while switching the account"
+            message: "ගිණුම මාරු කිරීමේදී දෝෂයක් ඇතිවිය"
           },
           genericError: {
-            description: "Error occurred while switching the account",
-            message: "Something went wrong"
+            description: "ගිණුම මාරු කිරීමේදී දෝෂයක් ඇතිවිය",
+            message: "දෝෂයක් ඇතිවිය"
           },
           success: {
-            description: "The account has been switched successfully",
-            message: "Account switched successfully"
+            description: "ගිණුම සාර්ථකව මාරු කර ඇත",
+            message: "ගිණුම සාර්ථකව මාරු විය"
           }
         }
       }
@@ -550,129 +550,129 @@ export const userPortal: UserPortalNS = {
     mfa: {
       authenticatorApp: {
         description: "Scan the QR code using an Authenticator App to use TOTP" + " as a second " + "authentication factor",
-        heading: "via Authenticator App",
-        hint: "Show the QR Code",
+        heading: "සත්‍යාපන යෙදුම",
+        hint: "QR කේතය පෙන්වන්න",
         modals: {
-          done: "Success! Now you can use your Authentication App for two-factor authentication",
+          done: "සාර්ථකත්වය! දැන් ඔබට සාධක දෙකක සත්‍යාපනය සඳහා ඔබේ සත්‍යාපන යෙදුම භාවිතා කළ හැකිය",
           scan: {
-            authenticatorApps: "Authenticator Apps",
-            generate: "Generate a new code",
-            heading: "Scan this QR Code using an Authenticator App",
-            messageBody: "You can find a list of Authenticator Apps available here.",
-            messageHeading: "Don't have an Authenticator App installed?"
+            authenticatorApps: "සත්‍යාපන යෙදුම්",
+            generate: "නව කේතයක් ජනනය කරන්න",
+            heading: "සත්‍යාපන යෙදුමක් භාවිතයෙන් මෙම QR කේතය පරිලෝකනය කරන්න",
+            messageBody: "ඔබට මෙහි ඇති සත්‍යාපන යෙදුම් ලැයිස්තුවක් සොයාගත හැකිය.",
+            messageHeading: "සත්‍යාපන යෙදුමක් ස්ථාපනය කර නොමැතිද?"
           },
           verify: {
-            error: "Verification failed. Please try again.",
-            heading: "Enter the verification code from the Authentication App",
-            label: "Verification Code",
-            placeholder: "Enter your verification code",
-            reScan: "Re-scan",
-            reScanQuestion: "Want to scan the QR code again?",
-            requiredError: "Enter the verification code"
+            error: "සත්‍යාපනය අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න.",
+            heading: "සත්‍යාපන යෙදුමෙන් සත්‍යාපන කේතය ඇතුළත් කරන්න",
+            label: "සත්යාපන කේතය",
+            placeholder: "ඔබගේ සත්‍යාපන කේතය ඇතුළත් කරන්න",
+            reScan: "නැවත පරිලෝකනය කරන්න",
+            reScanQuestion: "QR කේතය නැවත පරිලෝකනය කිරීමට අවශ්‍යද?",
+            requiredError: "සත්‍යාපන කේතය ඇතුළත් කරන්න"
           }
         },
         notifications: {
           initError: {
             error: {
               description: "{{error}}",
-              message: "Something went wrong"
+              message: "මොකක්හරි වැරැද්දක් වෙලා"
             },
             genericError: {
-              description: "An error occurred while retrieving the QR code",
-              message: "Something went wrong"
+              description: "QR කේතය ලබා ගැනීමේදී දෝෂයක් ඇතිවිය",
+              message: "මොකක්හරි වැරැද්දක් වෙලා"
             }
           },
           refreshError: {
             error: {
               description: "{{error}}",
-              message: "Something went wrong"
+              message: "මොකක්හරි වැරැද්දක් වෙලා"
             },
             genericError: {
-              description: "An error occurred while trying to get a new QR code",
-              message: "Something went wrong"
+              description: "නව QR කේතයක් ලබා ගැනීමට උත්සාහ කිරීමේදී දෝෂයකි",
+              message: "මොකක්හරි වැරැද්දක් වෙලා"
             }
           }
         }
       },
       fido: {
-        description: "Authenticate yourself by connecting a biometric device or a FIDO key",
+        description: "FIDO යතුරක් සම්බන්ධ කිරීමෙන් සත්‍යාපනය කිරීම",
         form: {
-          label: "Security Device",
-          placeholder: "Enter a device name",
-          remove: "Remove the device",
-          required: "Please enter a name for your security device"
+          label: "ආරක්ෂක උපාංගය",
+          placeholder: "උපාංග නාමයක් ඇතුළත් කරන්න",
+          remove: "උපාංගය ඉවත් කරන්න",
+          required: "කරුණාකර ඔබගේ ආරක්ෂක උපාංගයේ නම ඇතුළත් කරන්න"
         },
-        heading: "via Security Device",
+        heading: "FIDO",
         modals: {
           deviceRegistrationErrorModal: {
             description: "The device registration was interrupted. If this was not intentional you " + "may retry the same flow or try again with an older security key.",
-            heading: "Device Registration Failed"
+            heading: "උපාංග ලියාපදිංචි කිරීම අසාර්ථක විය"
           }
         },
         notifications: {
           removeDevice: {
             error: {
               description: "{{description}}",
-              message: "Error occurred while removing the device"
+              message: "උපාංගය ඉවත් කිරීමේදී දෝෂයක් ඇතිවිය"
             },
             genericError: {
-              description: "Error occurred while removing the device",
-              message: "Something went wrong"
+              description: "උපාංගය ඉවත් කිරීමේදී දෝෂයක් ඇතිවිය",
+              message: "දෝෂයක් ඇතිවිය!!!"
             },
             success: {
-              description: "The device was successfully removed from the list",
-              message: "Your Device Removed Successfully"
+              description: "උපාංගය ලැයිස්තුවෙන් සාර්ථකව ඉවත් කරන ලදි",
+              message: "ඔබගේ උපාංගය සාර්ථකව ඉවත් කරන ලදි"
             }
           },
           startFidoFlow: {
             error: {
               description: "{{description}}",
-              message: "Error occurred while retrieving the device"
+              message: "උපාංගය ලියාපදිංචි කිරීමේදී දෝෂයක් ඇතිවිය"
             },
             genericError: {
-              description: "Error occurred while retrieving the device",
-              message: "Something went wrong"
+              description: "උපාංගය ලියාපදිංචි කිරීමේදී දෝෂයක් ඇතිවිය",
+              message: "දෝෂයක් ඇතිවිය!!!"
             },
             success: {
               description: "The device was successfully registered and now you can use it as an " + "authentication factor",
-              message: "Your Device Registered Successfully"
+              message: "ඔබගේ උපාංගය සාර්ථකව ලියාපදිංචි කර ඇත"
             }
           },
           updateDeviceName: {
             error: {
               description: "{{description}}",
-              message: "Error occurred while updating the security device name"
+              message: "ආරක්ෂක උපාංගයේ නම යාවත්කාලීන කිරීමේදී දෝෂයක් ඇතිවිය"
             },
             genericError: {
-              description: "Error occurred while updating the security device name",
-              message: "Something went wrong"
+              description: "ආරක්ෂක උපාංගයේ නම යාවත්කාලීන කිරීමේදී දෝෂයක් ඇතිවිය",
+              message: "දෝෂයක් ඇතිවිය!!!"
             },
             success: {
-              description: "The name of your security device was successfully updated",
-              message: "Security Device name updated successfully"
+              description: "ඔබගේ ආරක්ෂක උපාංගයේ නම සාර්ථකව යාවත්කාලීන කරන ලදි",
+              message: "ආරක්ෂක උපාංගයේ නම සාර්ථකව යාවත්කාලීන කරන ලදි"
             }
           }
         },
-        tryButton: "Try with an older Device"
+        tryButton: "පැරණි උපාංගයක් සමඟ උත්සාහ කරන්න"
       },
       smsOtp: {
         descriptions: {
-          hint: "You'll receive a text message containing a one-time verification code"
+          hint: "සත්‍යාපන කේතය අඩංගු කෙටි පණිවිඩයක් ඔබට ලැබෙනු ඇත"
         },
-        heading: "via SMS",
+        heading: "කෙටි පණිවුඩ OTP",
         notifications: {
           updateMobile: {
             error: {
               description: "{{description}}",
-              message: "Error occurred while updating the mobile number"
+              message: "ජංගම දුරකථන අංකය යාවත්කාලීන කිරීමේදී දෝෂයක් ඇතිවිය"
             },
             genericError: {
-              description: "Error occurred while updating the mobile number",
-              message: "Something went wrong"
+              description: "ජංගම දුරකථන අංකය යාවත්කාලීන කිරීමේදී දෝෂයක් ඇතිවිය",
+              message: "දෝෂයක් ඇතිවිය!!!"
             },
             success: {
-              description: "The mobile number in the user profile is updated successfully",
-              message: "Mobile number updated successfully"
+              description: "පරිශීලක පැතිකඩෙහි ඇති ජංගම දුරකථන අංකය සාර්ථකව යාවත්කාලීන වේ",
+              message: "ජංගම දුරකථන අංකය සාර්ථකව යාවත්කාලීන කරන ලදි"
             }
           }
         }
@@ -682,40 +682,40 @@ export const userPortal: UserPortalNS = {
       widgets: {
         accountActivity: {
           actionTitles: {
-            update: "Manage account activity"
+            update: "ගිණුම් ක්‍රියාකාරකම් කළමනාකරණය කරන්න"
           },
-          description: "You are currently logged in from the following device",
-          header: "Account activity"
+          description: "ඔබ දැනට පහත උපාංගයෙන් පුරනය වී ඇත",
+          header: "ගිණුම් ක්‍රියාකාරකම්"
         },
         accountSecurity: {
           actionTitles: {
-            update: "Update account security"
+            update: "ගිණුම් ආරක්ෂාව යාවත්කාලීන කරන්න"
           },
-          description: "Settings and recommendations to help you keep your account secure",
-          header: "Account security"
+          description: "ඔබගේ ගිණුම ආරක්ෂිතව තබා ගැනීමට ඔබට උදව් කිරීමට සැකසීම් සහ නිර්දේශ",
+          header: "ගිණුම් ආරක්ෂාව"
         },
         accountStatus: {
-          complete: "Your profile is complete",
-          completedFields: "Completed fields",
-          completionPercentage: "Your profile completion is at {{percentage}}%",
-          inComplete: "Complete your profile",
-          inCompleteFields: "Incomplete fields",
-          mandatoryFieldsCompletion: "{{completed}} out of {{total}} mandatory fields completed",
-          optionalFieldsCompletion: "{{completed}} out of {{total}} optional fields completed"
+          complete: "ඔබගේ ගිණුම සම්පූර්ණයි",
+          completedFields: "සම්පුර්ණ කළ ක්ෂේත්‍ර",
+          completionPercentage: "ඔබගේ ගිණුම සම්පුර්ණ කිරීමේ ප්‍රතිශතය {{percentage}}%",
+          inComplete: "ඔබගේ ගිණුම සම්පූර්ණ කරන්න",
+          inCompleteFields: "අසම්පූර්ණ ක්ෂේත්‍ර",
+          mandatoryFieldsCompletion: "අනිවාර්ය ක්ෂේත්‍රයන් {{total}} ගෙන් {{completed}} සම්පූර්ණ කර ඇත",
+          optionalFieldsCompletion: "විකල්ප ක්ෂේත්‍රයන් {{total}} ගෙන් {{completed}} සම්පූර්ණ කර ඇත"
         },
         consentManagement: {
           actionTitles: {
-            manage: "Manage consents"
+            manage: "අනුමැතිය පාලනය කිරීම"
           },
-          description: "Control the data you want to share with applications",
-          header: "Consents control"
+          description: "ඔබට යෙදුම් සදහා සැපයීමට අවශ්‍ය දත්ත පාලනය කිරීම",
+          header: "අනුමැතිය කළමනාකරණය කිරීම"
         }
       }
     },
     privacy: {
       about: {
         description: "WSO2 Identity Server (referred to as “WSO2 IS” within this policy) is an open source " + "Identity Management and Entitlement Server that is based on open standards and specifications.",
-        heading: "About WSO2 Identity Server"
+        heading: "WSO2 හැඳුනුම් සේවය පිලිබදව"
       },
       privacyPolicy: {
         collectionOfPersonalInfo: {
@@ -727,7 +727,7 @@ export const userPortal: UserPortalNS = {
             },
             para1: "WSO2 IS collects your information only to serve your access requirements. For example:"
           },
-          heading: "Collection of personal information",
+          heading: "පුද්ගලික තොරතුරු එකතු කිරීම",
           trackingTechnologies: {
             description: {
               list1: {
@@ -736,9 +736,9 @@ export const userPortal: UserPortalNS = {
                 2: "Tracking your geographic information with the IP address.",
                 3: "Tracking your login history with browser cookies. Please see our" + " {{cookiePolicyLink}} for more information."
               },
-              para1: "WSO2 IS collects your information by:"
+              para1: "WSO2 IS විසින් ඔබේ තොරතුරු රැස් කරන්නේ:"
             },
-            heading: "Tracking Technologies"
+            heading: "ලුහුබැඳීමේ තාක්ෂණයන්"
           }
         },
         description: {
@@ -753,42 +753,42 @@ export const userPortal: UserPortalNS = {
               1: "This privacy policy is for the informational purposes of the entity or persons " + "running WSO2 IS and sets out the processes and functionality contained within " + "WSO2 IS regarding personal data protection. It is the responsibility of entities " + "and persons running WSO2 IS to create and administer its own rules and processes " + "governing users' personal data, and such rules and processes may change the use, " + "storage and disclosure policies contained herein. Therefore users should consult " + "the entity or persons running WSO2 IS for its own privacy policy for details " + "governing users' personal data."
             }
           },
-          heading: "Disclaimer"
+          heading: "වියාචනය"
         },
         disclosureOfPersonalInfo: {
           description: "WSO2 IS only discloses personal information to the relevant applications (also " + "known as Service Provider) that are registered with WSO2 IS. These applications are " + "registered by the identity administrator of your entity or organization. Personal " + "information is disclosed only for the purposes for which it was collected (or for a " + "use identified as consistent with that purpose), as controlled by such Service Providers, " + "unless you have consented otherwise or where it is required by law.",
-          heading: "Disclosure of personal information",
+          heading: "පුද්ගලික තොරතුරු අනාවරණය කිරීම",
           legalProcess: {
             description: "Please note that the organization, entity or individual running WSO2 IS may " + "be compelled to disclose your personal information with or without your consent when " + "it is required by law following due and lawful process.",
-            heading: "Legal process"
+            heading: "නීති ක්‍රියාවලිය"
           }
         },
-        heading: "Privacy Policy",
+        heading: "රහස්‍යතා ප්‍රතිපත්තිය",
         moreInfo: {
           changesToPolicy: {
             description: {
               para1: "Upgraded versions of WSO2 IS may contain changes to this policy and " + "revisions to this policy will be packaged within such upgrades. Such changes " + "would only apply to users who choose to use upgraded versions.",
               para2: "The organization running WSO2 IS may revise the Privacy Policy from time to " + "time. You can find the most recent governing policy with the respective link " + "provided by the organization running WSO2 IS. The organization will notify " + "any changes to the privacy policy over our official public channels."
             },
-            heading: "Changes to this policy"
+            heading: "මෙම ප්‍රතිපත්තියේ වෙනස්කම්"
           },
           contactUs: {
             description: {
               para1: "Please contact WSO2 if you have any question or concerns regarding this privacy " + "policy."
             },
-            heading: "Contact us"
+            heading: "අප අමතන්න"
           },
-          heading: "More information",
+          heading: "වැඩි විස්තර",
           yourChoices: {
             description: {
               para1: "If you are already have a user account within WSO2 IS, you have the right to " + "deactivate your account if you find that this privacy policy is unacceptable to you.",
               para2: "If you do not have an account and you do not agree with our privacy policy, " + "you can choose not to create one."
             },
-            heading: "Your choices"
+            heading: "ඔබේ තේරීම්"
           }
         },
         storageOfPersonalInfo: {
-          heading: "Storage of personal information",
+          heading: "පුද්ගලික තොරතුරු ගබඩා කිරීම",
           howLong: {
             description: {
               list1: {
@@ -798,21 +798,21 @@ export const userPortal: UserPortalNS = {
               para1: "WSO2 IS retains your personal data as long as you are an active user of our " + "system. You can update your personal data at any time using the given self-care " + "user portals.",
               para2: "WSO2 IS may keep hashed secrets to provide you with an added level of security. " + "This includes:"
             },
-            heading: "How long your personal information is retained"
+            heading: "ඔබේ පුද්ගලික තොරතුරු කොපමණ කාලයක් රඳවා තබා ගනීද?"
           },
           requestRemoval: {
             description: {
               para1: "You can request the administrator to delete your account. The administrator is " + "the administrator of the tenant you are registered under, or the " + "super-administrator if you do not use the tenant feature.",
               para2: "Additionally, you can request to anonymize all traces of your activities " + "that WSO2 IS may have retained in logs, databases or analytical storage."
             },
-            heading: "How to request removal of your personal information"
+            heading: "ඔබගේ පුද්ගලික තොරතුරු ඉවත් කිරීමට ඉල්ලන්නේ කෙසේද?"
           },
           where: {
             description: {
               para1: "WSO2 IS stores your personal information in secured databases. WSO2 IS " + "exercises proper industry accepted security measures to protect the database " + "where your personal information is held. WSO2 IS as a product does not transfer " + "or share your data with any third parties or locations.",
               para2: "WSO2 IS may use encryption to keep your personal data with an added level " + "of security."
             },
-            heading: "Where your personal information is stored"
+            heading: "ඔබේ පුද්ගලික තොරතුරු ගබඩා කර ඇත්තේ කොහේද?"
           }
         },
         useOfPersonalInfo: {
@@ -823,9 +823,9 @@ export const userPortal: UserPortalNS = {
               2: "Derive statistical data for analytical purposes on system performance improvements. " + "WSO2 IS will not keep any personal information after statistical calculations. " + "Therefore, the statistical report has no means of identifying an individual person."
             },
             para1: "WSO2 IS will only use your personal information for the purposes for which it was " + "collected (or for a use identified as consistent with that purpose).",
-            para2: "WSO2 IS uses your personal information only for the following purposes.",
+            para2: "WSO2 IS ඔබේ පුද්ගලික තොරතුරු භාවිතා කරන්නේ පහත සඳහන් අරමුණු සඳහා පමණි.",
             subList1: {
-              heading: "This includes:",
+              heading: "මෙයට ඇතුළත් වන්නේ:",
               list: {
                 0: "IP address",
                 1: "Browser fingerprinting",
@@ -833,14 +833,14 @@ export const userPortal: UserPortalNS = {
               }
             },
             subList2: {
-              heading: "WSO2 IS may use:",
+              heading: "WSO2 IS භාවිතා කළ හැකිය:",
               list: {
                 0: "IP Address to derive geographic information",
                 1: "Browser fingerprinting to determine the browser technology or/and version"
               }
             }
           },
-          heading: "Use of personal information"
+          heading: "පුද්ගලික තොරතුරු භාවිතය"
         },
         whatIsPersonalInfo: {
           description: {
@@ -859,64 +859,64 @@ export const userPortal: UserPortalNS = {
             para1: "WSO2 IS considers anything related to you, and by which you may be identified, as " + "your personal information. This includes, but is not limited to:",
             para2: "However, WSO2 IS also collects the following information that is not considered " + "personal information, but is used only for <1>statistical</1> purposes. The reason " + "for this is that this information can not be used to track you."
           },
-          heading: "What is personal information?"
+          heading: "පුද්ගලික තොරතුරු යනු කුමක්ද?"
         }
       }
     },
     profile: {
       fields: {
-        addressesHome: "Home address",
-        addressesWork: "Work address",
-        emails: "Email",
-        emailsHome: "Home email",
-        emailsOther: "Other email",
-        emailsWork: "Work email",
+        addressesHome: "නිවසේ ලිපිනය",
+        addressesWork: "වැඩ ලිපිනය",
+        emails: "විද්යුත් තැපෑල",
+        emailsHome: "නිවසේ විද්‍යුත් තැපෑල",
+        emailsOther: "වෙනත් විද්‍යුත් තැපෑල",
+        emailsWork: "වැඩ ඊමේල්",
         generic: {
-          default: "Add {{fieldName}}"
+          default: "එකතු කරන්න {{fieldName}}"
         },
-        nameFamilyName: "Last name",
-        nameGivenName: "First name",
-        phoneNumbers: "Phone number",
-        phoneNumbersHome: "Home phone number",
-        phoneNumbersMobile: "Mobile number",
-        phoneNumbersOther: "Other phone number",
-        phoneNumbersWork: "Work phone number",
-        profileImage: "Profile Image",
+        nameFamilyName: "අවසන් නම",
+        nameGivenName: "මුල් නම",
+        phoneNumbers: "දුරකතන අංකය",
+        phoneNumbersHome: "නිවසේ දුරකථන අංකය",
+        phoneNumbersMobile: "ජංගම දූරකථන අංකය",
+        phoneNumbersOther: "වෙනත් දුරකථන අංකය",
+        phoneNumbersWork: "රැකියා දුරකථන අංකය",
+        profileImage: "පැතිකඩ රූපය",
         profileUrl: "URL",
-        userName: "Username"
+        userName: "පරිශීලක නාමය"
       },
       forms: {
         emailChangeForm: {
           inputs: {
             email: {
-              label: "Email",
-              note: "NOTE: This will change the email address in your profile",
-              placeholder: "Enter your email address",
+              label: "විද්‍යුත් තැපෑල",
+              note: "සටහන: මෙය ඔබගේ පැතිකඩෙහි විද්‍යුත් තැපැල් ලිපිනය වෙනස් කරයි",
+              placeholder: "විද්‍යුත් තැපෑල ඇතුල් කරන්න",
               validations: {
-                empty: "Email address is a required field",
-                invalidFormat: "The email address is not of the correct format"
+                empty: "විද්‍යුත් තැපෑල අත්‍යවශ්‍ය ක්ෂේත්‍රයකි",
+                invalidFormat: "ඊමේල් ලිපිනය නිවැරදි ආකෘතියෙන් නොවේ"
               }
             }
           }
         },
         generic: {
           inputs: {
-            placeholder: "Enter your {{fieldName}}",
+            placeholder: "{{fieldName}} ඇතුල් කරන්න",
             validations: {
-              empty: "{{fieldName}} is a required field",
-              invalidFormat: "The {{fieldName}} is not of the correct format"
+              empty: "{{fieldName}} අත්‍යවශ්‍ය ක්ෂේත්‍රයකි",
+              invalidFormat: "{{fieldName}} නිවැරදි ආකෘතියෙන් නොවේ"
             }
           }
         },
         mobileChangeForm: {
           inputs: {
             mobile: {
-              label: "Mobile number",
-              note: "NOTE: This will change the mobile number in your profile",
-              placeholder: "Enter your mobile number",
+              label: "ජංගම දුරකථන අංකය",
+              note: "සටහන: මෙය ඔබගේ පැතිකඩෙහි ඇති ජංගම දුරකථන අංකය වෙනස් කරනු ඇත",
+              placeholder: "ජංගම දුරකථන අංකය ඇතුල් කරන්න",
               validations: {
-                empty: "Mobile number is a required field",
-                invalidFormat: "The mobile number is not of the right format"
+                empty: "ජංගම දුරකථන අංකය අත්‍යවශ්‍ය ක්ෂේත්‍රයකි",
+                invalidFormat: "ජංගම දුරකථන අංකය නිවැරදි ආකෘතියෙන් නොවේ"
               }
             }
           }
@@ -924,17 +924,17 @@ export const userPortal: UserPortalNS = {
         nameChangeForm: {
           inputs: {
             firstName: {
-              label: "First name",
-              placeholder: "Enter the first name",
+              label: "මුල් නම",
+              placeholder: "මුල් නම ඇතුල් කරන්න",
               validations: {
-                empty: "First name is a required field"
+                empty: "මුල් නම අත්‍යවශ්‍ය ක්ෂේත්‍රයකි"
               }
             },
             lastName: {
-              label: "Last name",
-              placeholder: "Enter the last name",
+              label: "අන්තිම නම",
+              placeholder: "අන්තිම නම ඇතුල් කරන්න",
               validations: {
-                empty: "Last name is a required field"
+                empty: "අන්තිම නම අත්‍යවශ්‍ය ක්ෂේත්‍රයකි"
               }
             }
           }
@@ -942,10 +942,10 @@ export const userPortal: UserPortalNS = {
         organizationChangeForm: {
           inputs: {
             organization: {
-              label: "Organization",
-              placeholder: "Enter your organization",
+              label: "සංවිධානය",
+              placeholder: "සංවිධානය ඇතුල් කරන්න",
               validations: {
-                empty: "Organization is a required field"
+                empty: "සංවිධානය අත්‍යවශ්‍ය ක්ෂේත්‍රයකි"
               }
             }
           }
@@ -953,49 +953,49 @@ export const userPortal: UserPortalNS = {
       },
       messages: {
         emailConfirmation: {
-          content: "Please confirm the email address update in order to add the new email to your profile.",
-          header: "Confirmation pending!"
+          content: "ඔබගේ පැතිකඩට නව විද්‍යුත් තැපෑල එක් කිරීම සඳහා කරුණාකර විද්‍යුත් තැපැල් ලිපින යාවත්කාලීන කිරීම තහවුරු කරන්න.",
+          header: "තහවුරු කිරීම අපේක්ෂිතයි!"
         }
       },
       notifications: {
         getProfileInfo: {
           error: {
             description: "{{description}}",
-            message: "Error occurred while retrieving the profile details"
+            message: "පැතිකඩ විස්තර ලබා ගැනීමේදී දෝෂයක් ඇතිවිය"
           },
           genericError: {
-            description: "Error occurred while retrieving the profile details",
-            message: "Something went wrong"
+            description: "පැතිකඩ විස්තර ලබා ගැනීමේදී දෝෂයක් ඇතිවිය",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "The required user profile details are retrieved successfully",
-            message: "Successfully retrieved user profile"
+            description: "අවශ්‍ය පරිශීලක පැතිකඩ විස්තර සාර්ථකව ලබා ගන්න ලදී",
+            message: "පරිශීලක පැතිකඩ සාර්ථකව ලබා ගන්නා ලදි"
           }
         },
         getUserReadOnlyStatus: {
           genericError: {
-            description: "Error occurred while retrieving the read-only status of the user",
-            message: "Something went wrong"
+            description: "පරිශීලකයාගේ කියවීමට පමණක් තත්ත්වය ලබා ගැනීමේදී දෝෂයක් ඇතිවිය",
+            message: "දෝෂයක් ඇතිවිය!!!"
           }
         },
         updateProfileInfo: {
           error: {
             description: "{{description}}",
-            message: "Error occurred while updating the profile details"
+            message: "පැතිකඩ විස්තර යාවත්කාලීන කිරීමේදී දෝෂයක් ඇතිවිය"
           },
           genericError: {
-            description: "Error occurred while updating the profile details",
-            message: "Something went wrong"
+            description: "පැතිකඩ විස්තර යාවත්කාලීන කිරීමේදී දෝෂයක් ඇතිවිය",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "The required user profile details were successfully updated",
-            message: "User profile updated successfully"
+            description: "අවශ්‍ය පරිශීලක පැතිකඩ විස්තර සාර්ථකව යාවත්කාලීන කරන ලදි",
+            message: "පරිශීලක පැතිකඩ සාර්ථකව යාවත්කාලීන කරන ලදි"
           }
         }
       },
       placeholders: {
         SCIMDisabled: {
-          heading: "This feature is not available for your account"
+          heading: "මෙම අංගය ඔබගේ ගිණුමට ලබා ගත නොහැක"
         }
       }
     },
@@ -1004,40 +1004,40 @@ export const userPortal: UserPortalNS = {
         downloadProfileInfo: {
           error: {
             description: "{{description}}",
-            message: "Error occurred while downloading the user profile details"
+            message: "Eපරිශීලක පැතිකඩ විස්තර බාගත කිරීමේදී දෝෂයක් ඇතිවිය"
           },
           genericError: {
-            description: "Error occurred while downloading the user profile details",
-            message: "Something went wrong"
+            description: "පරිශීලක පැතිකඩ විස්තර බාගත කිරීමේදී දෝෂයක් ඇතිවිය",
+            message: "දෝෂයක් ඇතිවිය!!!"
           },
           success: {
-            description: "The file containing the required user profile details has started downloading",
-            message: "User profile details download started"
+            description: "අවශ්‍ය පරිශීලක පැතිකඩ විස්තර අඩංගු ගොනුව බාගත කිරීම ආරම්භ කර ඇත.",
+            message: "පරිශීලක පැතිකඩ විස්තර බාගත කිරීම ආරම්භ විය"
           }
         }
       }
     },
     userAvatar: {
-      infoPopover: "This image has been retrieved from <1>Gravatar</1> service.",
-      urlUpdateHeader: "Enter an image URL to set your profile picture"
+      infoPopover: "මෙම පින්තූරය <1>Gravatar</1> සේවාවෙන් ලබාගෙන ඇත.",
+      urlUpdateHeader: "ඔබගේ පැතිකඩ පින්තූරය සැකසීමට රූප URL එකක් ඇතුළත් කරන්න"
     },
     userSessions: {
-      browserAndOS: "{{browser}} on {{os}} {{version}}",
+      browserAndOS: "{{os}} {{version}} මත {{browser}}",
       dangerZones: {
         terminate: {
-          actionTitle: "Terminate",
-          header: "Terminate session",
-          subheader: "You will be logged out of the session on the particular device."
+          actionTitle: "අවසන් කරන්න",
+          header: "සැසිය අවසන් කරන්න",
+          subheader: "විශේෂිත උපාංගයේ සැසියෙන් ඔබ ඉවත් වනු ඇත."
         }
       },
-      lastAccessed: "Last accessed {{date}}",
+      lastAccessed: "අවසන් ප්‍රවේශය {{date}}",
       modals: {
         terminateAllUserSessionsModal: {
-          heading: "Confirmation",
+          heading: "තහවුරු කිරීම",
           message: "This action will log you out of all the sessions on every device. Do you wish to " + "continue?"
         },
         terminateUserSessionModal: {
-          heading: "Confirmation",
+          heading: "තහවුරු කිරීම",
           message: "This action will log you out of the session on the particular device. Do you wish to " + "continue?"
         }
       },
@@ -1045,43 +1045,43 @@ export const userPortal: UserPortalNS = {
         fetchSessions: {
           error: {
             description: "{{description}}",
-            message: "Error retrieving IDP session"
+            message: "IDP සැසිය ලබා ගැනීමේ දෝෂයකි"
           },
           genericError: {
-            description: "Couldn't retrieve any IDP sessions",
-            message: "Something went wrong"
+            description: "කිසිදු IDP සැසියක් ලබා ගැනීමට නොහැකි විය",
+            message: "දෝෂයක් ඇතිවිය"
           },
           success: {
-            description: "Successfully retrieved the IDP sessions",
-            message: "IDP session retrieval successful"
+            description: "IDP සැසි සාර්ථකව ලබා ගන්නා ලදි",
+            message: "IDP සැසිය නැවත ලබා ගැනීම සාර්ථකයි"
           }
         },
         terminateAllUserSessions: {
           error: {
             description: "{{description}}",
-            message: "Couldn't terminate IDP sessions"
+            message: "IDP සැසි අවසන් කිරීමට නොහැකි විය"
           },
           genericError: {
-            description: "Something went wrong while terminating IDP sessions",
-            message: "Couldn't terminate IDP sessions"
+            description: "IDP සැසි අවසන් කිරීමේදී දෝෂයක් ඇතිවී ඇත.",
+            message: "IDP සැසි අවසන් කිරීමට නොහැකි විය"
           },
           success: {
-            description: "Successfully terminated all IDP sessions",
-            message: "Terminated all IDP sessions"
+            description: "සියලුම IDP සැසි සාර්ථකව අවසන් කරන ලදි",
+            message: "සියලුම IDP සැසි අවසන් කරන ලදි"
           }
         },
         terminateUserSession: {
           error: {
             description: "{{description}}",
-            message: "Couldn't terminate the IDP session"
+            message: "IDP සැසිය අවසන් කිරීමට නොහැකි විය"
           },
           genericError: {
-            description: "Something went wrong while terminating the IDP session",
-            message: "Couldn't terminate the IDP session"
+            description: "IDP සැසි අවසන් කිරීමේදී දෝෂයක් ඇතිවී ඇත.",
+            message: "IDP සැසිය අවසන් කිරීමට නොහැකි විය"
           },
           success: {
-            description: "Successfully terminated the IDP session",
-            message: "Session terminate success"
+            description: "IDP සැසිය සාර්ථකව අවසන් කරන ලදි",
+            message: "සාර්ථකයි"
           }
         }
       }
@@ -1094,50 +1094,50 @@ export const userPortal: UserPortalNS = {
           errors: {
             noAssociation: {
               content: "It seems like the selected email is not registered on Gravatar. " + "Sign up for a Gravatar account by visiting Gravatar official website or use " + "one of the following.",
-              header: "No matching Gravatar image found!"
+              header: "ගැලපෙන Gravatar රූපයක් හමු නොවීය!"
             }
           },
-          heading: "Gravatar based on "
+          heading: "Gravatar මත පදනම්ව "
         },
         hostedAvatar: {
-          heading: "Hosted Image",
+          heading: "සත්කාරක රූපය",
           input: {
             errors: {
               http: {
                 content: "The selected URL points to an insecure image served over HTTP. " + "Please proceed with caution.",
-                header: "Insecure Content!"
+                header: "අනාරක්ෂිත අන්තර්ගතය!"
               },
               invalid: {
-                content: "Please enter a valid image URL"
+                content: "කරුණාකර වලංගු Image URL එකක් ඇතුළත් කරන්න"
               }
             },
-            hint: "Enter a valid image URL which is hosted on a third party location.",
-            placeholder: "Enter URL for the image.",
+            hint: "තෙවන පාර්ශවීය ස්ථානයක සත්කාරක වන වලංගු රූප URL එකක් ඇතුළත් කරන්න.",
+            placeholder: "රූපය සඳහා URL ඇතුලත් කරන්න.",
             warnings: {
               dataURL: {
                 content: "Using Data URLs with large character count might result in database " + "issues. Proceed with caution.",
-                header: "Double check the entered Data URL!"
+                header: "ඇතුළත් කළ දත්ත URL එක දෙවරක් පරීක්ෂා කරන්න!"
               }
             }
           }
         },
         systemGenAvatars: {
-          heading: "System generated avatar",
+          heading: "පද්ධතිය ජනනය කළ අවතාරය",
           types: {
-            initials: "Initials"
+            initials: "මුලකුරු"
           }
         }
       },
       description: null,
-      heading: "Update profile picture",
-      primaryButton: "Save",
-      secondaryButton: "Cancel"
+      heading: "පැතිකඩ පින්තූරය යාවත්කාලීන කරන්න",
+      primaryButton: "සුරකින්න",
+      secondaryButton: "අවලංගු කරන්න"
     },
     sessionTimeoutModal: {
       description: "You will be logged out of the current session due to inactivity." + "Please choose Stay logged in if you would like to continue the session.",
-      heading: "You will be logged out in <1>{{ time }}</1>.",
-      primaryButton: "Stay logged in",
-      secondaryButton: "Logout"
+      heading: "තත්පර <1>{{ time }}</1> කින් ඔබ ඉවත් වනු ඇත.",
+      primaryButton: "පුරනය වී සිටින්න",
+      secondaryButton: "වරන්න"
     }
   },
   pages: {
@@ -1147,128 +1147,128 @@ export const userPortal: UserPortalNS = {
     },
     operations: {
       subTitle: "Review operational tasks that requires your approval",
-      title: "Operations"
+      title: "මෙහෙයුම්"
     },
     overview: {
-      subTitle: "Manage your personal information, account security, and privacy",
-      title: "Welcome, {{firstName}}"
+      subTitle: "ඔබගේ තොරතුරු, ආරක්ෂාව, පෞද්ගලිකත්වය සහ අදාළ සියලු වින්‍යාසයන් කළමනාකරණය කිරීම",
+      title: "ආයුබෝවන්, {{firstName}}"
     },
     personalInfo: {
       subTitle: "Edit and export your personal profile and manage linked accounts",
-      title: "Personal info"
+      title: "පෞද්ගලික තොරතුරු"
     },
     privacy: {
       subTitle: "",
-      title: "WSO2 Identity Server Privacy Policy"
+      title: "WSO2 හැඳුනුම් සේවාදායක රහස්‍යතා ප්‍රතිපත්තිය"
     },
     security: {
-      subTitle: "Secure your account by managing consents, sessions, and security settings",
-      title: "Security"
+      subTitle: "සියලුම ආරක්ෂක සැකසුම් සහ නිර්දේශ සමඟ යාවත්කාලීනව සිටීමෙන් ඔබගේ ගිණුම සුරක්ෂිත කිරීම",
+      title: "ආරක්ෂාව"
     }
   },
   placeholders: {
     404: {
-      action: "Back to home",
+      action: "නැවත ආරම්භයට",
       subtitles: {
         0: "We couldn't find the page you are looking for.",
         1: "Please check the URL or click on the button below to be redirected back to the home page."
       },
-      title: "Page not found"
+      title: "පිටුව හමු නොවීය"
     },
     emptySearchResult: {
-      action: "Clear search query",
+      action: "සෙවුම් විමසුම හිස් කරන්න",
       subtitles: {
         0: "We couldn't find any results for \"{{query}}\"",
         1: "Please try a different search term."
       },
-      title: "No results found"
+      title: "ප්‍රතිපලයක් හමු නොවීය"
     },
     genericError: {
-      action: "Refresh the page",
+      action: "පිටුව refresh කරන්න",
       subtitles: {
         0: "Something went wrong while displaying this page.",
         1: "See the browser console for technical details."
       },
-      title: "Something went wrong"
+      title: "යමක් වැරදී ඇත"
     },
     loginError: {
-      action: "Continue logout",
+      action: "ලොග්අවුට් වෙන්න",
       subtitles: {
         0: "It seems like you don't have permission to use this portal.",
         1: "Please sign in with a different account."
       },
-      title: "You are not authorized"
+      title: "ඔබට අවසර නැත"
     }
   },
   sections: {
     accountRecovery: {
       description: "If you forget your password or username, recover your account " + "using email, SMS, or challenge questions",
-      heading: "Account recovery"
+      heading: "ගිණුම් ප්‍රතිසාධනය"
     },
     approvals: {
       description: "Approve or deny tasks related to workflow operations like adding users, " + "updating user claims, deleting user roles, etc.",
-      heading: "Pending approvals",
+      heading: "අපේක්ෂිත අනුමත කිරීම්",
       placeholders: {
         emptyApprovalList: {
-          heading: "You don't have any {{status}} pending approvals"
+          heading: "ඔබට අපේක්ෂිත අනුමත කිරීම් නොමැත"
         }
       }
     },
     changePassword: {
       actionTitles: {
-        change: "Change your password"
+        change: "ඔබගේ මුරපදය වෙනස් කරන්න"
       },
       description: "Update your password regularly and make sure it's unique from other passwords you use.",
-      heading: "Change password"
+      heading: "මුරපදය වෙනස් කරන්න"
     },
     consentManagement: {
       actionTitles: {
-        empty: "You have not granted consent to any application"
+        empty: "ඔබ කිසිදු යෙදුමක් අනුමත කර නැත"
       },
       description: "Revoke any consent given to an application or personal detail that you " + "have agreed to share",
-      heading: "Manage consents",
+      heading: "අනුමත යෙදුම්",
       placeholders: {
         emptyConsentList: {
-          heading: "You have not granted consent to any application"
+          heading: "ඔබ කිසිදු යෙදුමක් අනුමත කර නැත"
         }
       }
     },
     federatedAssociations: {
-      description: "View your accounts from other identity providers that are linked with this account",
-      heading: "External Logins"
+      description: "මෙම ගිණුම හා සම්බන්ධ වෙනත් අනන්‍යතා සපයන්නන්ගෙන් ඔබගේ ගිණුම් බලන්න",
+      heading: "බාහිර පිවිසුම්"
     },
     linkedAccounts: {
       actionTitles: {
-        add: "Add account"
+        add: "ගිණුම එක් කරන්න"
       },
-      description: "Link/associate your other accounts, and access them seamlessly without re-login",
-      heading: "Linked accounts"
+      description: "ඔබ සම්බන්ධිත ගිණුමකට පිවිසීමෙන් පසු ඔබගේ වෙනත් ගිණුම් එකතු කර ඒවා අතර මාරු වන්න",
+      heading: "සම්බන්ධිත ගිණුම්"
     },
     mfa: {
       description: "Add an extra layer of protection to your account by configuring multiple " + "steps of authentication. You can choose from options like SMS or a security device",
-      heading: "Multi-factor authentication"
+      heading: "බහු සාධක සත්‍යාපනය"
     },
     profile: {
       description: "Manage and update your personal details like name, email, mobile number, organization, etc.",
-      heading: "Profile"
+      heading: "පැතිකඩ"
     },
     profileExport: {
       actionTitles: {
-        export: "Download as JSON"
+        export: "පැතිකඩ දත්ත අපනයනය කරන්න"
       },
-      description: "Download all your profile data including personal data, security questions, and consents",
-      heading: "Export profile"
+      description: "පුද්ගලික දත්ත, ආරක්ෂක ප්‍රශ්න සහ කැමැත්ත ඇතුළුව ඔබගේ සියලුම පැතිකඩ දත්ත බාගත කිරීම",
+      heading: "පැතිකඩ අපනයනය"
     },
     userSessions: {
       actionTitles: {
-        empty: "No active IDP sessions",
-        terminateAll: "Terminate all sessions"
+        empty: "සක්‍රීය IDP සැසි නොමැත",
+        terminateAll: "සියලුම IDP සැසි අවසන් කරන්න"
       },
-      description: "Review all the identity provider sessions that are currently active on your account",
-      heading: "Active IDP sessions",
+      description: "මෙය ඔබගේ ගිණුමේ සක්‍රියව IDP සැසි ලැයිස්තුවකි",
+      heading: "සක්‍රීය IDP සැසි",
       placeholders: {
         emptySessionList: {
-          heading: "There are no active IDP sessions for this user"
+          heading: "සක්‍රීය IDP සැසි නොමැත"
         }
       }
     }
