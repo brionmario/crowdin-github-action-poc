@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "target": "es6",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "jsx": "react",
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "noLib": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "experimentalDecorators": true,
+        // Common JS is required for the TS to JSON transpilation.
+        "module": "commonjs",
+        "rootDir": "src",
+        "outDir": "dist/src",
+        "declaration": true,
+        "declarationDir": "dist/types"
+    },
+    "compileOnSave": false,
+    "exclude": [
+        "node_modules",
+        "test-configs",
+        "src/**/tests/*",
+        "**/*.test.ts"
+    ]
+}
